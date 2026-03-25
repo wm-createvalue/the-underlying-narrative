@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Owns an Idea? The History of Human IP | The Underlying Narrative</title>
+  <!-- ── SEO ── -->
+  <meta name="description" content="From the Venice Patent Statute of 1474 to AI's challenge to copyright itself — 550 years of intellectual property law, the four pillars of IP, six landmark cases, and the crisis AI is creating right now.">
+  <meta name="keywords" content="intellectual property, copyright history, patent law, IP law, AI copyright, Venice Patent Statute, trademark, trade secrets">
+  <meta name="author" content="The Underlying Narrative">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://theunderlyingnarrative.com/issues/human-ip">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Who Owns an Idea? The History of Human IP | The Underlying Narrative">
+  <meta property="og:description" content="From the Venice Patent Statute of 1474 to AI's challenge to copyright itself — 550 years of intellectual property law, the four pillars of IP, six landmark cases, and the crisis AI is creating right now.">
+  <meta property="og:url" content="https://theunderlyingnarrative.com/issues/human-ip">
+  <meta property="og:site_name" content="The Underlying Narrative">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Who Owns an Idea? The History of Human IP | The Underlying Narrative">
+  <meta name="twitter:description" content="From the Venice Patent Statute of 1474 to AI's challenge to copyright itself — 550 years of intellectual property law, the four pillars of IP, six landmark cases, and the crisis AI is creating right now.">
+  <meta name="twitter:site" content="@underlyingnarr">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Who Owns an Idea? The History of Human IP | The Underlying Narrative",
+    "description": "From the Venice Patent Statute of 1474 to AI's challenge to copyright itself — 550 years of intellectual property law, the four pillars of IP, six landmark cases, and the crisis AI is creating right now.",
+    "url": "https://theunderlyingnarrative.com/issues/human-ip",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Underlying Narrative",
+      "url": "https://theunderlyingnarrative.com"
+    }
+  }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Azeret+Mono:wght@300;400;500&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F3EE;
+  --ink: #1A1612;
+  --mid: #5C5348;
+  --faint: #E2DBD0;
+  --rule: #CCC5B8;
+  --accent: #C0392B;
+  --accent2: #2471A3;
+  --accent3: #1E8449;
+  --warm: #D4AC6E;
+  --paper: #FDFAF6;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Karla', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── NOISE TEXTURE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.4;
+}
+
+/* ── MASTHEAD ── */
+.masthead {
+  border-bottom: 3px double var(--ink);
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--paper);
+}
+.masthead-left {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--mid);
+  text-transform: uppercase;
+}
+.masthead-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.masthead-right {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--mid);
+  text-transform: uppercase;
+}
+
+/* ── HERO ── */
+.hero {
+  padding: 5rem 3rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.hero-label {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.hero-label::after {
+  content: '';
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 4rem;
+  align-items: end;
+}
+
+.hero-h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+
+.hero-h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-deck {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--mid);
+  font-weight: 300;
+  border-left: 3px solid var(--rule);
+  padding-left: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-stat-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid var(--rule);
+}
+.hero-stat {
+  padding: 1.2rem;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.hero-stat:nth-child(2n) { border-right: none; }
+.hero-stat:nth-child(3), .hero-stat:nth-child(4) { border-bottom: none; }
+.stat-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.stat-label {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mid);
+}
+
+.hero-sidebar {
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  padding: 1.8rem;
+}
+.sidebar-head {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--mid);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+}
+.sidebar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--faint);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.sidebar-item:last-child { border-bottom: none; }
+.sidebar-item:hover { padding-left: 0.3rem; }
+.sidebar-num {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--accent);
+  padding-top: 0.1rem;
+  flex-shrink: 0;
+}
+.sidebar-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.sidebar-date {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.58rem;
+  color: var(--mid);
+  display: block;
+  margin-top: 0.15rem;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0;
+}
+.divider-thick {
+  border-top: 3px double var(--ink);
+  margin: 0 3rem;
+}
+
+/* ── TIMELINE ── */
+.timeline-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+}
+
+.chapter-head {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.chapter-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--faint);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.chapter-info {}
+.chapter-label {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 0.3rem;
+}
+.chapter-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ERA CARDS */
+.era {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 0;
+  margin-bottom: 0;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: relative;
+}
+.era.vis { opacity: 1; transform: translateY(0); }
+
+.era-left {
+  padding: 2rem 2rem 0 0;
+  border-right: 1px solid var(--rule);
+  text-align: right;
+  position: relative;
+}
+.era-dot-outer {
+  position: absolute;
+  right: -6px;
+  top: 2.2rem;
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--ink);
+}
+.era-period {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--mid);
+  line-height: 1.5;
+}
+.era-category {
+  display: inline-block;
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 1px;
+}
+.cat-patent { background: rgba(192,57,43,0.1); color: var(--accent); }
+.cat-copy { background: rgba(36,113,163,0.1); color: var(--accent2); }
+.cat-trade { background: rgba(30,132,73,0.1); color: var(--accent3); }
+.cat-brand { background: rgba(212,172,110,0.15); color: #8B6914; }
+.cat-digital { background: rgba(100,50,150,0.1); color: #7D3C98; }
+
+.era-right {
+  padding: 2rem 0 2.5rem 2.5rem;
+  border-bottom: 1px solid var(--faint);
+}
+.era:last-child .era-right { border-bottom: none; }
+
+.era-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.7rem;
+  color: var(--ink);
+}
+.era-body {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--mid);
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+  max-width: 640px;
+}
+.era-pull {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--ink);
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding: 0.9rem 0;
+  margin-bottom: 1.2rem;
+  max-width: 560px;
+}
+.era-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.era-tag {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--rule);
+  color: var(--mid);
+  border-radius: 1px;
+}
+
+/* ── IP TYPES GRID ── */
+.types-section {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 5rem 3rem;
+}
+.types-inner { max-width: 1100px; margin: 0 auto; }
+
+.types-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.types-h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.types-intro {
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: rgba(247,243,238,0.6);
+  font-weight: 300;
+  align-self: center;
+}
+
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.type-card {
+  padding: 2rem 1.5rem;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: background 0.3s;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.type-card:hover { background: rgba(255,255,255,0.04); }
+.type-card:nth-child(4n) { border-right: none; }
+.type-card:nth-child(n+5) { border-bottom: none; }
+
+.type-icon { font-size: 1.6rem; margin-bottom: 1rem; display: block; }
+.type-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--bg);
+}
+.type-dur {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--warm);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+.type-def {
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: rgba(247,243,238,0.55);
+  font-weight: 300;
+}
+
+/* ── CASE STUDIES ── */
+.cases-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+}
+.cases-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.case-card {
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  transition: all 0.25s;
+  overflow: hidden;
+}
+.case-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+
+.case-top {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.case-verdict {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+.case-name {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.4rem;
+}
+.case-year {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.62rem;
+  color: var(--mid);
+}
+.case-body {
+  padding: 1.2rem 1.5rem;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: var(--mid);
+  font-weight: 300;
+}
+.case-impact {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-top: 0.8rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--faint);
+}
+
+/* ── QUIZ ── */
+.quiz-section {
+  background: linear-gradient(135deg, #1A1612 0%, #2C2420 100%);
+  padding: 5rem 3rem;
+  color: var(--bg);
+}
+.quiz-inner { max-width: 720px; margin: 0 auto; }
+
+.quiz-eyebrow {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--warm);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+.quiz-h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  line-height: 1.2;
+}
+
+.qcard {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 2.5rem;
+  border-radius: 2px;
+}
+.q-meta {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: rgba(247,243,238,0.4);
+  margin-bottom: 1.2rem;
+}
+.q-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  margin-bottom: 1.8rem;
+  font-weight: 400;
+}
+.q-options { display: flex; flex-direction: column; gap: 0.7rem; }
+.q-opt {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.09);
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  color: rgba(247,243,238,0.85);
+  font-family: 'Karla', sans-serif;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 1px;
+}
+.q-opt:hover:not(.locked) { background: rgba(212,172,110,0.1); border-color: rgba(212,172,110,0.3); }
+.q-opt.correct { background: rgba(30,132,73,0.2); border-color: rgba(30,132,73,0.5); color: #82E0AA; }
+.q-opt.wrong { background: rgba(192,57,43,0.15); border-color: rgba(192,57,43,0.4); color: #F1948A; }
+.q-opt.locked { cursor: default; }
+
+.q-explain {
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+  background: rgba(212,172,110,0.08);
+  border-left: 3px solid var(--warm);
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(247,243,238,0.75);
+  display: none;
+}
+.q-explain.show { display: block; }
+
+.q-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.q-progress { font-family: 'Azeret Mono', monospace; font-size: 0.65rem; color: rgba(247,243,238,0.35); }
+.q-btn {
+  background: var(--warm);
+  color: var(--ink);
+  border: none;
+  padding: 0.65rem 1.5rem;
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.q-btn:hover:not(:disabled) { background: #E8C97A; }
+.q-btn:disabled { opacity: 0.25; cursor: default; }
+
+.q-score {
+  text-align: center;
+  padding: 2rem 0;
+}
+.q-score-big {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--warm);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.q-score-label { font-size: 1rem; color: rgba(247,243,238,0.5); margin-bottom: 1.5rem; }
+
+/* ── IP vs AI SECTION ── */
+.ai-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 3rem;
+}
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+.ai-tension {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.tension-item {
+  display: grid;
+  grid-template-columns: 3px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+.tension-bar { height: 100%; min-height: 60px; }
+.tension-bar.red { background: var(--accent); }
+.tension-bar.blue { background: var(--accent2); }
+.tension-bar.green { background: var(--accent3); }
+.tension-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.3rem; }
+.tension-desc { font-size: 0.82rem; color: var(--mid); line-height: 1.65; font-weight: 300; }
+
+.ai-timeline {
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  padding: 1.8rem;
+}
+.ai-tl-head {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--mid);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+}
+.ai-event {
+  display: flex;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--faint);
+}
+.ai-event:last-child { border-bottom: none; }
+.ai-yr {
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.62rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  padding-top: 0.1rem;
+  width: 42px;
+}
+.ai-ev-text { font-size: 0.82rem; line-height: 1.55; color: var(--mid); font-weight: 300; }
+
+/* ── FOOTER ── */
+.footer-strip {
+  background: var(--ink);
+  color: rgba(247,243,238,0.35);
+  padding: 2rem 3rem;
+  font-family: 'Azeret Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-sidebar { display: none; }
+  .era { grid-template-columns: 90px 1fr; }
+  .types-grid { grid-template-columns: 1fr 1fr !important; }
+  .types-grid .type-card { border-bottom: 1px solid rgba(247,243,238,0.08) !important; }
+  .types-grid .type-card:nth-child(2) { border-right: none !important; }
+  .cases-grid { grid-template-columns: 1fr; }
+  .ai-grid { grid-template-columns: 1fr; }
+  .types-header { grid-template-columns: 1fr; gap: 1rem; }
+  .masthead { padding: 1rem; }
+  .hero, .timeline-wrap, .cases-section, .ai-section { padding: 3rem 1.5rem; }
+  .types-section { padding: 3rem 1.5rem; }
+  .quiz-section { padding: 3rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+<!-- MOBILE NOTE -->
+<div id="mobileNote" style="
+  display:none;
+  background:rgba(0,0,0,0.85);
+  color:rgba(255,255,255,0.7);
+  text-align:center;
+  padding:0.5rem 1rem;
+  font-size:0.65rem;
+  letter-spacing:0.12em;
+  font-family:monospace;
+  text-transform:uppercase;
+  position:relative;
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+">
+  ✦ Best experienced on desktop
+</div>
+<script>
+  if (window.innerWidth < 768) document.getElementById('mobileNote').style.display = 'block';
+</script>
+
+<!-- MASTHEAD -->
+<div class="masthead">
+  <div class="masthead-left">The Intellectual Property Review</div>
+  <div class="masthead-title">Est. 1474 &nbsp;·&nbsp; Venice Patent Statute</div>
+  <div class="masthead-right">Special Edition · 2026</div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label">Deep History</div>
+  <div class="hero-grid">
+    <div>
+      <h1 class="hero-h1">Who Owns<br>an <em>Idea</em>?</h1>
+      <p class="hero-deck">From a Venetian glassblower's jealously guarded secrets to Taylor Swift trademarking her lyrics and courts deciding whether AI can "invent" — the history of Human IP is the story of humanity trying to put a fence around thought itself.</p>
+      <div class="hero-stat-block">
+        <div class="hero-stat">
+          <div class="stat-num">$5.9T</div>
+          <div class="stat-label">US Intangible IP value (2024)</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-num">1474</div>
+          <div class="stat-label">Year of first patent law (Venice)</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-num">3.4M</div>
+          <div class="stat-label">Patent filings worldwide per year</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-num">95yrs</div>
+          <div class="stat-label">Longest copyright duration (US)</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-sidebar">
+      <div class="sidebar-head">Inside This Edition</div>
+      <div class="sidebar-item" onclick="document.getElementById('tl').scrollIntoView({behavior:'smooth'})">
+        <div class="sidebar-num">I</div>
+        <div><div class="sidebar-text">550 Years of IP History</div><span class="sidebar-date">From Venice to Silicon Valley</span></div>
+      </div>
+      <div class="sidebar-item" onclick="document.getElementById('types').scrollIntoView({behavior:'smooth'})">
+        <div class="sidebar-num">II</div>
+        <div><div class="sidebar-text">The Four Pillars of IP</div><span class="sidebar-date">Patents, Copyright, Trademarks, Trade Secrets</span></div>
+      </div>
+      <div class="sidebar-item" onclick="document.getElementById('cases').scrollIntoView({behavior:'smooth'})">
+        <div class="sidebar-num">III</div>
+        <div><div class="sidebar-text">Landmark Cases That Changed Everything</div><span class="sidebar-date">Battles that rewrote the rules</span></div>
+      </div>
+      <div class="sidebar-item" onclick="document.getElementById('ai').scrollIntoView({behavior:'smooth'})">
+        <div class="sidebar-num">IV</div>
+        <div><div class="sidebar-text">AI & the IP Crisis</div><span class="sidebar-date">Who owns what a machine creates?</span></div>
+      </div>
+      <div class="sidebar-item" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">
+        <div class="sidebar-num">V</div>
+        <div><div class="sidebar-text">Test Your IP IQ</div><span class="sidebar-date">5-question challenge</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider-thick">
+
+<!-- TIMELINE -->
+<section class="timeline-wrap" id="tl">
+  <div class="chapter-head">
+    <div class="chapter-num">I</div>
+    <div class="chapter-info">
+      <div class="chapter-label">Chapter One</div>
+      <div class="chapter-title">550 Years of Human IP</div>
+    </div>
+  </div>
+
+  <div class="era" data-d="0">
+    <div class="era-left">
+      <div class="era-period">1474<br>Venice</div>
+      <div class="era-category cat-patent">Patent</div>
+      <div class="era-dot-outer"></div>
+    </div>
+    <div class="era-right">
+      <h3 class="era-title">The World's First Patent Law</h3>
+      <p class="era-body">The Venetian Senate passed the Parte Veneziana — the world's first formal patent statute — granting 10-year monopolies to inventors of "new and ingenious devices." The primary motive was economic espionage prevention: Venice's glassblowers on Murano island were forbidden to leave the republic on pain of death, and the Republic didn't want its industrial secrets walking out the door. IP law began as a state security tool, not a creator's right.</p>
+      <p class="era-pull">"Any person who shall build any new and ingenious device... not previously made in our dominion, shall give it to us."</p>
+      <div class="era-tags">
+        <span class="era-tag">10-year monopoly</span>
+        <span class="era-tag">State-granted privilege</span>
+        <span class="era-tag">Murano glassblowers</span>
+        <span class="era-tag">Industrial espionage law</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="era" data-d="1">
+    <div class="era-left">
+      <div class="era-period">1710<br>England</div>
+      <div class="era-category cat-copy">Copyright</div>
+      <div class="era-dot-outer"></div>
+    </div>
+    <div class="era-right">
+      <h3 class="era-title">The Statute of Anne: Copyright Is Born</h3>
+      <p class="era-body">Before 1710, publishers (not authors) owned books in perpetuity through a guild monopoly called the Stationers' Company. The Statute of Anne shattered this: for the first time, <em>authors</em> gained legal ownership of their works — for 14 years, renewable once. This was revolutionary. It recognized that the mind that created a work deserved protection, not merely the machine that printed it. Every modern copyright law descends from this single Act of Parliament.</p>
+      <p class="era-pull">"An Act for the Encouragement of Learning" — the first copyright law placed the creator, not the printer, at the center.</p>
+      <div class="era-tags">
+        <span class="era-tag">14-year term</span>
+        <span class="era-tag">Author's rights</span>
+        <span class="era-tag">Broke publisher monopoly</span>
+        <span class="era-tag">Foundation of all copyright</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="era" data-d="2">
+    <div class="era-left">
+      <div class="era-period">1790<br>United States</div>
+      <div class="era-category cat-patent">Patent</div>
+      <div class="era-dot-outer"></div>
+    </div>
+    <div class="era-right">
+      <h3 class="era-title">The US Patent System & the Founding Bargain</h3>
+      <p class="era-body">The US Constitution explicitly empowered Congress to grant patents "to promote the Progress of Science and useful Arts." The first US Patent Act (1790) was signed by George Washington. The founding bargain was deliberate: the inventor receives a limited monopoly; in exchange, they must <em>fully disclose</em> their invention to the public. After the patent expires, the knowledge belongs to everyone. Thomas Jefferson, the first patent examiner, personally reviewed every application. By 1836, volume was so high that the Patent Office became its own institution.</p>
+      <p class="era-pull">"The patent system added the fuel of interest to the fire of genius." — Abraham Lincoln, the only US president to hold a patent.</p>
+      <div class="era-tags">
+        <span class="era-tag">Constitutional basis</span>
+        <span class="era-tag">Disclosure for monopoly</span>
+        <span class="era-tag">Jefferson as examiner</span>
+        <span class="era-tag">Limited term bargain</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="era" data-d="3">
+    <div class="era-left">
+      <div class="era-period">1800s<br>Industrial Age</div>
+      <div class="era-category cat-trade">Trade Secret</div>
+      <div class="era-dot-outer"></div>
+    </div>
+    <div class="era-right">
+      <h3 class="era-title">Trade Secrets & The Rise of Industrial Espionage</h3>
+      <p class="era-body">The 19th century saw a new form of IP protection emerge: the trade secret. Unlike patents, trade secrets require no disclosure and last forever — as long as you can keep them. Coca-Cola's formula (1886) became the canonical example, famously never patented to avoid the mandatory disclosure. Steel mills, textile manufacturers, and chemical companies developed elaborate systems of secrecy, employee oaths, and industrial counterintelligence. Trade secrets drove the first non-compete clauses — still contested in courts today.</p>
+      <p class="era-pull">Coca-Cola's formula has never been patented. Instead, it has been a trade secret for over 135 years — potentially the most valuable secret in history.</p>
+      <div class="era-tags">
+        <span class="era-tag">No disclosure required</span>
+        <span class="era-tag">Infinite duration</span>
+        <span class="era-tag">Coca-Cola formula</span>
+        <span class="era-tag">Non-compete clauses born</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="era" data-d="4">
+    <div class="era-left">
+      <div class="era-period">1886<br>Paris &amp; Berne</div>
+      <div class="era-category cat-copy">Copyright</div>
+      <div class="era-dot-outer"></div>
+    </div>
+    <div class="era-right">
+      <h3 class="era-title">IP Goes Global: The Berne Convention</h3>
+      <p class="era-body">Victor Hugo was furious. His novels were being reprinted without permission — and without royalties — across Europe and the Americas. His advocacy helped push the 1886 Berne Convention, which established that copyright protection should be automatic (no registration needed) and should cross national borders. 181 countries are now signatories. The US held out until 1989, previously requiring formal copyright registration. Berne turned IP from a national privilege into a global human right of creators.</p>
+      <p class="era-pull">Victor Hugo argued that ideas cross borders freely — so protections for those ideas should too. Berne made him right, legally.</p>
+      <div class="era-tags">
+        <span class="era-tag">181 signatory countries</span>
+        <span class="era-tag">Automatic protection</span>
+        <span class="era-tag">No registration needed</span>
+        <span class="era-tag">Victor Hugo's legacy</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="era" data-d="5">
+    <div class="era-left">
+      <div class="era-period">1970s–90s<br>Software Age</div>
+      <div class="era-category cat-digital">Digital IP</div>
+      <div class="era-dot-outer"></div>
+    </div>
+    <div class="era-right">
+      <h3 class="era-title">Software, Code & the IP Scramble</h3>
+      <p class="era-body">When software arrived, existing IP law had no idea what to do with it. Was code a "writing" (protectable by copyright) or a "machine" (patentable)? The answer, after decades of litigation, turned out to be: <em>both</em>. The 1976 Copyright Act and later the 1980 Computer Software Copyright Act extended protection to code. Microsoft's legal battles over Windows and IBM's patent arsenal fundamentally shaped the industry. The open-source movement — starting with GNU (1983) and Linux (1991) — pushed back, arguing that software should be a commons, not property. This battle continues.</p>
+      <p class="era-pull">"Software is eating the world — and IP law spent 30 years figuring out which fork and knife to use."</p>
+      <div class="era-tags">
+        <span class="era-tag">Code as copyrightable text</span>
+        <span class="era-tag">Software patents</span>
+        <span class="era-tag">Open source counter-movement</span>
+        <span class="era-tag">GPL license invented</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="era" data-d="6">
+    <div class="era-left">
+      <div class="era-period">1994<br>WTO / TRIPS</div>
+      <div class="era-category cat-brand">Trademark</div>
+      <div class="era-dot-outer"></div>
+    </div>
+    <div class="era-right">
+      <h3 class="era-title">TRIPS: IP Becomes Trade Policy</h3>
+      <p class="era-body">The Agreement on Trade-Related Aspects of Intellectual Property Rights (TRIPS, 1994) tied IP protection to international trade for the first time. Countries that wanted access to WTO trade benefits had to adopt minimum IP standards. The US pharmaceutical industry was the key driver — it wanted patent protection for drugs in developing countries. Critics argued TRIPS made life-saving medicines unaffordable. The Doha Declaration (2001) created emergency exceptions. TRIPS transformed IP from a legal system into a geopolitical weapon.</p>
+      <p class="era-pull">TRIPS showed that IP law was no longer just about protecting creators — it was now a lever of global economic power.</p>
+      <div class="era-tags">
+        <span class="era-tag">WTO membership requirement</span>
+        <span class="era-tag">Pharma patent wars</span>
+        <span class="era-tag">Doha Declaration carveout</span>
+        <span class="era-tag">IP as trade weapon</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="era" data-d="7">
+    <div class="era-left">
+      <div class="era-period">2023–Now<br>AI Age</div>
+      <div class="era-category cat-digital">Digital IP</div>
+      <div class="era-dot-outer"></div>
+    </div>
+    <div class="era-right">
+      <h3 class="era-title">Generative AI: The IP System's Stress Test</h3>
+      <p class="era-body">ChatGPT, Midjourney, and Sora shattered the IP landscape. Artists discovered their work was used to train AI without consent or compensation. Authors including John Grisham and George R.R. Martin sued. The US Copyright Office ruled in 2023 that purely AI-generated work cannot be copyrighted — only works with "sufficient human authorship" qualify. Meanwhile, the question of who owns training data, model weights, and AI outputs remains unresolved in virtually every jurisdiction. The next decade of IP law will be rewritten by AI.</p>
+      <p class="era-pull">"The machines learned from us. Now we're trying to figure out what that means for who owns what — and no one has the answer yet."</p>
+      <div class="era-tags">
+        <span class="era-tag">AI training data lawsuits</span>
+        <span class="era-tag">No copyright for pure AI output</span>
+        <span class="era-tag">Human authorship threshold</span>
+        <span class="era-tag">Model weights as trade secrets</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider-thick">
+
+<!-- IP TYPES -->
+<section class="types-section" id="types">
+  <div class="types-inner">
+    <div class="chapter-head" style="color:var(--bg);">
+      <div class="chapter-num" style="color:rgba(247,243,238,0.1);">II</div>
+      <div>
+        <div class="chapter-label" style="color:rgba(247,243,238,0.4);">Chapter Two</div>
+        <div class="chapter-title">The Four Pillars of IP</div>
+      </div>
+    </div>
+    <div class="types-header">
+      <h2 class="types-h2">Every idea you protect<br>lives in one of these boxes.</h2>
+      <p class="types-intro">Intellectual property law rests on four foundational systems — each with its own logic, duration, and purpose. Understanding the differences explains why Coca-Cola chose secrecy over patents, why Mickey Mouse keeps getting protected, and why your startup's brand name matters more than you think.</p>
+    </div>
+    <div class="types-grid" style="grid-template-columns: repeat(4,1fr);">
+      <div class="type-card" style="border-bottom:none;">
+        <span class="type-icon">⚙️</span>
+        <div class="type-name">Patents</div>
+        <div class="type-dur">20 years · Must disclose</div>
+        <div class="type-def">Protects inventions and processes. The trade-off: you get an exclusive monopoly, but you must fully reveal how your invention works. After 20 years, it's public domain. Used for drugs, devices, algorithms, and manufacturing methods.</div>
+      </div>
+      <div class="type-card" style="border-bottom:none;">
+        <span class="type-icon">©</span>
+        <div class="type-name">Copyright</div>
+        <div class="type-dur">Life + 70 years · Automatic</div>
+        <div class="type-def">Protects original creative expression — books, music, art, code, film. Arises automatically at creation. Doesn't protect ideas, only their fixed expression. The longest and most expansive IP right, increasingly lobbied to extend further.</div>
+      </div>
+      <div class="type-card" style="border-bottom:none;">
+        <span class="type-icon">™</span>
+        <div class="type-name">Trademarks</div>
+        <div class="type-dur">Indefinite · Must be used</div>
+        <div class="type-def">Protects brands, logos, slogans, and sounds that identify commercial origin. Can last forever if actively used and defended. The Nike swoosh, McDonald's golden arches, and Intel's chime are all trademarks. The most "use it or lose it" IP right.</div>
+      </div>
+      <div class="type-card" style="border-right:none;border-bottom:none;">
+        <span class="type-icon">🔒</span>
+        <div class="type-name">Trade Secrets</div>
+        <div class="type-dur">Indefinite · Must stay secret</div>
+        <div class="type-def">Any confidential business information that provides competitive advantage. No registration, no disclosure — just maintain secrecy. The formula for Coca-Cola, Google's search algorithm weighting, KFC's spice blend. Loses protection the moment it leaks.</div>
+      </div>
+    </div>
+
+    <!-- SPECIALIST FORMS -->
+    <div style="margin-top:3rem;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;padding-bottom:1rem;border-bottom:1px solid rgba(247,243,238,0.15);">
+        <div style="font-family:'Azeret Mono',monospace;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(247,243,238,0.4);">Beyond the four pillars</div>
+        <div style="flex:1;height:1px;background:rgba(247,243,238,0.1);"></div>
+        <div style="font-family:'Azeret Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(247,243,238,0.25);">Specialist Forms</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(247,243,238,0.08);">
+        <div class="type-card" style="border-bottom:none;background:rgba(255,255,255,0.02);">
+          <span class="type-icon" style="font-size:1.2rem;">🎭</span>
+          <div class="type-name" style="font-size:0.9rem;">Moral Rights</div>
+          <div class="type-dur">Varies · Non-transferable</div>
+          <div class="type-def" style="font-size:0.75rem;">The right of creators to be credited and to object to distortion of their work — even after selling copyright. Strong in France and Europe, weak in the US.</div>
+        </div>
+        <div class="type-card" style="border-bottom:none;background:rgba(255,255,255,0.02);">
+          <span class="type-icon" style="font-size:1.2rem;">🌱</span>
+          <div class="type-name" style="font-size:0.9rem;">Plant Breeders' Rights</div>
+          <div class="type-dur">20–25 years</div>
+          <div class="type-def" style="font-size:0.75rem;">A patent-like system for new plant varieties. Farmers who save and replant seeds from protected varieties can face lawsuits — a source of major agricultural controversy.</div>
+        </div>
+        <div class="type-card" style="border-bottom:none;background:rgba(255,255,255,0.02);">
+          <span class="type-icon" style="font-size:1.2rem;">💊</span>
+          <div class="type-name" style="font-size:0.9rem;">Data Exclusivity</div>
+          <div class="type-dur">5–12 years</div>
+          <div class="type-def" style="font-size:0.75rem;">Pharmaceutical companies get exclusive rights to clinical trial data — preventing generics from using it to gain approval, even after the underlying patent expires.</div>
+        </div>
+        <div class="type-card" style="border-right:none;border-bottom:none;background:rgba(255,255,255,0.02);">
+          <span class="type-icon" style="font-size:1.2rem;">🗺️</span>
+          <div class="type-name" style="font-size:0.9rem;">Geographic Indications</div>
+          <div class="type-dur">Indefinite</div>
+          <div class="type-def" style="font-size:0.75rem;">Protects products tied to a specific place: Champagne, Parmigiano-Reggiano, Darjeeling tea. A $50B+ category and the source of intense US-EU trade disputes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LANDMARK CASES -->
+<section class="cases-section" id="cases">
+  <div class="chapter-head">
+    <div class="chapter-num">III</div>
+    <div>
+      <div class="chapter-label">Chapter Three</div>
+      <div class="chapter-title">Cases That Rewrote the Rules</div>
+    </div>
+  </div>
+  <div class="cases-grid">
+    <div class="case-card">
+      <div class="case-top">
+        <div class="case-verdict">📜 Copyright · Supreme Court</div>
+        <div class="case-name">Eldred v. Ashcroft</div>
+        <div class="case-year">2003 · United States</div>
+      </div>
+      <div class="case-body">
+        Congress extended copyright terms by 20 years — for the 11th time in 40 years — largely to protect Disney's Mickey Mouse. Eric Eldred, who published public domain works online, challenged it. The Supreme Court upheld the extension 7–2. Justice Breyer dissented: the extension served "no constitutional purpose." Critics dubbed it the "Mickey Mouse Protection Act."
+        <div class="case-impact">⚡ Impact: Set precedent that Congress can extend copyright terms indefinitely, effectively ending the public domain for modern works.</div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="case-top">
+        <div class="case-verdict">⚙️ Patent · Supreme Court</div>
+        <div class="case-name">Diamond v. Chakrabarty</div>
+        <div class="case-year">1980 · United States</div>
+      </div>
+      <div class="case-body">
+        Ananda Chakrabarty created a genetically modified bacterium that could eat oil spills. The USPTO rejected his patent — you can't patent a living thing. The Supreme Court disagreed 5–4: "anything under the sun made by man" is patentable. This decision unleashed the biotechnology industry and enabled patents on genes, GMOs, and later, human cell lines.
+        <div class="case-impact">⚡ Impact: Made biotech investment possible. Directly led to the $2.5T global biotech industry — and decades of gene patent controversy.</div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="case-top">
+        <div class="case-verdict">🔒 Trade Secret · Federal Circuit</div>
+        <div class="case-name">Waymo v. Uber</div>
+        <div class="case-year">2018 · United States</div>
+      </div>
+      <div class="case-body">
+        Anthony Levandowski downloaded 14,000 confidential files from Waymo (Google's self-driving car unit) before leaving to found a startup acquired by Uber. Waymo sued. The case settled for $245M in Uber equity. Levandowski was later convicted of trade secret theft and sentenced to prison — later pardoned by President Trump. The clearest modern example of human capital and IP colliding.
+        <div class="case-impact">⚡ Impact: Redefined trade secret theft risk in tech. Made "brain drain" between competitors a legal minefield.</div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="case-top">
+        <div class="case-verdict">📱 Patent · District Court</div>
+        <div class="case-name">Apple v. Samsung</div>
+        <div class="case-year">2011–2018 · Global</div>
+      </div>
+      <div class="case-body">
+        Apple sued Samsung for $2.5 billion, claiming Samsung copied the iPhone's look and feel. The litigation sprawled across 10 countries over 7 years, with over 50 separate lawsuits. Final US verdict: Samsung owed $539M. The case exposed the absurdity of "design patent" law — Samsung was partly found liable for the rounded corners of a rectangle.
+        <div class="case-impact">⚡ Impact: Made design patents a serious weapon. Triggered global debates about whether IP law was strangling smartphone innovation.</div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="case-top">
+        <div class="case-verdict">📻 Copyright · 9th Circuit</div>
+        <div class="case-name">Authors Guild v. Google</div>
+        <div class="case-year">2015 · United States</div>
+      </div>
+      <div class="case-body">
+        Google scanned 20+ million books without permission to build Google Books. Authors sued. The 2nd Circuit ruled Google's actions were fair use — the digitization served a "transformative" public interest (search and discovery) without substituting for the original works. A landmark for the internet age: copying at massive scale can be legal if the purpose is transformative.
+        <div class="case-impact">⚡ Impact: Established "transformation" as the key fair use test — the legal foundation now being tested by generative AI training.</div>
+      </div>
+    </div>
+    <div class="case-card">
+      <div class="case-top">
+        <div class="case-verdict">🤖 Copyright · USPTO / Courts</div>
+        <div class="case-name">Thaler v. Vidal (DABUS)</div>
+        <div class="case-year">2022 · US &amp; Global</div>
+      </div>
+      <div class="case-body">
+        Stephen Thaler built an AI called DABUS that he claimed invented two products autonomously. He applied for patents listing DABUS as the inventor. Courts in the US, UK, EU, and Australia all ruled the same way: only a human can be an inventor. No human = no patent. The AI's output was unprotectable. The question of AI-generated IP has yet to be definitively resolved anywhere on Earth.
+        <div class="case-impact">⚡ Impact: Established the "human authorship" requirement as the global baseline for IP protection — now the central battleground of AI law.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider-thick">
+
+<!-- AI & IP SECTION -->
+<section class="ai-section" id="ai">
+  <div class="chapter-head">
+    <div class="chapter-num">IV</div>
+    <div>
+      <div class="chapter-label">Chapter Four</div>
+      <div class="chapter-title">AI & the IP Crisis</div>
+    </div>
+  </div>
+  <div class="ai-grid">
+    <div>
+      <p style="font-size:0.95rem;line-height:1.8;color:var(--mid);font-weight:300;margin-bottom:1.5rem;">Generative AI has created the most significant stress test in the history of intellectual property law. Five unresolved tensions are reshaping the field right now — and none of them have clear answers.</p>
+      <div class="ai-tension">
+        <div class="tension-item">
+          <div class="tension-bar red"></div>
+          <div>
+            <div class="tension-title">Training Data Consent</div>
+            <div class="tension-desc">AI models trained on billions of copyrighted works without permission or payment. Is this fair use? The New York Times vs. OpenAI case could be the Napster moment for generative AI.</div>
+          </div>
+        </div>
+        <div class="tension-item">
+          <div class="tension-bar blue"></div>
+          <div>
+            <div class="tension-title">Output Ownership</div>
+            <div class="tension-desc">If AI writes your novel, who owns it? Current law says: you can copyright your prompts and edits, but not the AI's contribution. How much human involvement is "enough"?</div>
+          </div>
+        </div>
+        <div class="tension-item">
+          <div class="tension-bar green"></div>
+          <div>
+            <div class="tension-title">Style vs. Expression</div>
+            <div class="tension-desc">Copyright protects expression, not style. You can't copyright "painting like Monet." But when AI generates thousands of Monet-style images, does that destroy the value of the style itself?</div>
+          </div>
+        </div>
+        <div class="tension-item">
+          <div class="tension-bar red"></div>
+          <div>
+            <div class="tension-title">Model Weights as Trade Secrets</div>
+            <div class="tension-desc">OpenAI, Google, and Anthropic treat their trained models as trade secrets. But unlike Coca-Cola's formula, model weights encode millions of human creative works. Can you secrete others' expression?</div>
+          </div>
+        </div>
+        <div class="tension-item">
+          <div class="tension-bar blue"></div>
+          <div>
+            <div class="tension-title">AI as Inventor</div>
+            <div class="tension-desc">As AI systems autonomously design new drugs, materials, and devices — with no human "inventor" in the traditional sense — the patent system faces its deepest identity crisis since 1790.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ai-timeline">
+      <div class="ai-tl-head">AI & IP: Key Events 2022–2026</div>
+      <div class="ai-event">
+        <div class="ai-yr">2022</div>
+        <div class="ai-ev-text">US courts rule DABUS AI cannot be listed as patent inventor. Human authorship required.</div>
+      </div>
+      <div class="ai-event">
+        <div class="ai-yr">2023</div>
+        <div class="ai-ev-text">US Copyright Office: AI-generated images not copyrightable. Human creative control required for registration.</div>
+      </div>
+      <div class="ai-event">
+        <div class="ai-yr">2023</div>
+        <div class="ai-ev-text">Getty Images sues Stability AI for training on 12M+ copyrighted photos without license.</div>
+      </div>
+      <div class="ai-event">
+        <div class="ai-yr">2023</div>
+        <div class="ai-ev-text">New York Times sues OpenAI and Microsoft. Potentially billions in damages sought over training data.</div>
+      </div>
+      <div class="ai-event">
+        <div class="ai-yr">2024</div>
+        <div class="ai-ev-text">EU AI Act passes, requiring disclosure of training data used for general-purpose AI models.</div>
+      </div>
+      <div class="ai-event">
+        <div class="ai-yr">2024</div>
+        <div class="ai-ev-text">Multiple music labels (Universal, Sony, Warner) sue AI music generators Suno and Udio.</div>
+      </div>
+      <div class="ai-event">
+        <div class="ai-yr">2025</div>
+        <div class="ai-ev-text">First cases around "AI-assisted" vs "AI-generated" authorship reach appellate courts. Outcomes mixed.</div>
+      </div>
+      <div class="ai-event">
+        <div class="ai-yr">2026</div>
+        <div class="ai-ev-text">Global consensus still absent. US, EU, UK, and China pursuing divergent AI-IP frameworks simultaneously.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz-section" id="quiz">
+  <div class="quiz-inner">
+    <div class="quiz-eyebrow">Chapter Five</div>
+    <h2 class="quiz-h2">Test Your IP IQ</h2>
+    <div class="qcard">
+      <div id="qz"></div>
+    </div>
+  </div>
+</section>
+
+<div class="footer-strip">
+  <span>The Story of Human IP &nbsp;·&nbsp; 550 Years in One Page</span>
+  <span>Patents · Copyright · Trade Secrets · Trademarks</span>
+</div>
+
+<script>
+// ── SCROLL ANIMATIONS ──
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const d = parseInt(e.target.dataset.d || 0);
+      setTimeout(() => e.target.classList.add('vis'), d * 90);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.era').forEach(el => io.observe(el));
+
+// ── QUIZ ──
+const qs = [
+  {
+    q: "The world's first patent law was passed in 1474 by which city-state?",
+    opts: ["Florence", "Genoa", "Venice", "Amsterdam"],
+    ans: 2,
+    ex: "Venice passed the Parte Veneziana in 1474 — the world's first patent statute. It granted 10-year monopolies and was primarily motivated by the city's desire to prevent industrial secrets (especially glassblowing techniques from Murano) from leaving the republic."
+  },
+  {
+    q: "Why did Coca-Cola choose a trade secret over a patent for its formula?",
+    opts: [
+      "Patents were too expensive in 1886",
+      "Patents require public disclosure and expire after 20 years",
+      "Food formulas cannot be patented",
+      "The formula wasn't novel enough to qualify"
+    ],
+    ans: 1,
+    ex: "Patents require full public disclosure of the invention, and expire after 20 years — after which anyone can copy it freely. As a trade secret, Coca-Cola's formula has no expiration date and has never been disclosed. The tradeoff: if it ever leaks, protection is gone permanently."
+  },
+  {
+    q: "The Statute of Anne (1710) was revolutionary because it shifted copyright ownership from…",
+    opts: [
+      "Kings to governments",
+      "Publishers and printers to authors",
+      "Individual authors to universities",
+      "Corporations to individual inventors"
+    ],
+    ans: 1,
+    ex: "Before 1710, publishers (through the Stationers' Company guild) held perpetual monopolies over books. The Statute of Anne was the first law to recognize that the author — the person whose mind created the work — should hold the copyright. Every modern copyright law descends from this principle."
+  },
+  {
+    q: "In the 2022–2023 DABUS AI patent cases, courts globally ruled that…",
+    opts: [
+      "AI can be listed as co-inventor alongside a human",
+      "Only the AI's creator can be named as inventor",
+      "AI systems cannot be inventors — only humans can",
+      "AI inventions enter the public domain immediately"
+    ],
+    ans: 2,
+    ex: "Courts in the US, UK, EU, and Australia all reached the same conclusion: patent law requires a human inventor. Stephen Thaler's AI 'DABUS' could not be listed as the inventor of its own creations. This has left a growing gap in IP law as AI autonomously generates novel inventions."
+  },
+  {
+    q: "Which form of IP has no registration requirement, is automatic at creation, and lasts the longest?",
+    opts: ["Patents", "Trademarks", "Trade Secrets", "Copyright"],
+    ans: 3,
+    ex: "Copyright arises automatically the moment an original work is fixed in tangible form — no registration needed (though registration helps enforce it). It lasts for the author's life plus 70 years, making it the longest-running IP right. In the US, some corporate works are protected for 95 years from publication."
+  }
+];
+
+let cur = 0, score = 0, done = false;
+
+function render() {
+  const el = document.getElementById('qz');
+  if (cur >= qs.length) {
+    const pct = Math.round(score / qs.length * 100);
+    const label = pct >= 80 ? "IP Scholar 🎓" : pct >= 60 ? "Informed Practitioner 📋" : "Keep Reading 📚";
+    el.innerHTML = `<div class="q-score">
+      <span class="q-score-big">${score}/${qs.length}</span>
+      <p class="q-score-label">${label}</p>
+      <button class="q-btn" onclick="cur=0;score=0;render()">Try Again</button>
+    </div>`;
+    return;
+  }
+  const q = qs[cur];
+  el.innerHTML = `
+    <div class="q-meta">Question ${cur+1} of ${qs.length} &nbsp;·&nbsp; Score: ${score}</div>
+    <div class="q-text">${q.q}</div>
+    <div class="q-options">
+      ${q.opts.map((o,i) => `<button class="q-opt" id="opt${i}" onclick="pick(${i})">${o}</button>`).join('')}
+    </div>
+    <div class="q-explain" id="qex">${q.ex}</div>
+    <div class="q-bottom">
+      <span class="q-progress">${'●'.repeat(cur)}${'○'.repeat(qs.length - cur)}</span>
+      <button class="q-btn" id="nxt" onclick="next()" disabled>Continue →</button>
+    </div>
+  `;
+}
+
+function pick(i) {
+  if (document.querySelector('.q-opt.locked')) return;
+  const q = qs[cur];
+  document.querySelectorAll('.q-opt').forEach((b, idx) => {
+    b.classList.add('locked');
+    if (idx === q.ans) b.classList.add('correct');
+    else if (idx === i) b.classList.add('wrong');
+  });
+  if (i === q.ans) score++;
+  document.getElementById('qex').classList.add('show');
+  document.getElementById('nxt').disabled = false;
+}
+
+function next() { cur++; render(); }
+
+render();
+</script>
+
+<!-- SUBSCRIBE STRIP -->
+<section style="
+  background: #EDE7DC;
+  border-top: 3px double rgba(40,28,18,0.2);
+  padding: 4rem 2rem;
+  text-align: center;
+">
+  <div style="max-width: 520px; margin: 0 auto;">
+    <div style="font-family:'Azeret Mono',monospace;font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:#A67C3A;margin-bottom:0.8rem;">The Underlying Narrative</div>
+    <h3 style="font-family:'Libre Baskerville',serif;font-size:1.6rem;font-weight:400;color:#1A1612;line-height:1.4;margin-bottom:0.6rem;">Enjoyed this issue?</h3>
+    <p style="font-family:'Karla',sans-serif;font-size:0.9rem;color:#5C5348;line-height:1.7;margin-bottom:1.8rem;">The next one arrives fortnightly — free. Each issue excavates a big idea historically, structurally, and visually.</p>
+    <div style="border:1px solid rgba(40,28,18,0.15);border-radius:2px;overflow:hidden;background:#F7F3EE;">
+      <iframe src="https://theunderlyingnarrative.substack.com/embed"
+        width="100%" height="150"
+        style="border:none;display:block;"
+        frameborder="0" scrolling="no">
+      </iframe>
+    </div>
+    <p style="font-family:'Azeret Mono',monospace;font-size:0.55rem;letter-spacing:0.12em;color:#9C8B78;margin-top:0.8rem;text-transform:uppercase;">No spam · No ads · Unsubscribe anytime</p>
+  </div>
+</section>
+</body>
+</html>
