@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Root & Branch Problem — Human Capital from Schultz to AI | The Value Shift</title>
+  <!-- ── SEO ── -->
+  <meta name="description" content="Theodore Schultz coined "human capital" in 1961. Sixty years later, AI is systematically destroying mid-level skills while making root-level and canopy-level skills more valuable than ever. An interactive skill tree, disruption risk matrix, and full intellectual history.">
+  <meta name="keywords" content="human capital, Theodore Schultz, skills, AI displacement, education, Heckman, nested skills, labour economics">
+  <meta name="author" content="The Value Shift">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://thevalueshift.com/issues/human-capital">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The Root & Branch Problem — Human Capital from Schultz to AI | The Value Shift">
+  <meta property="og:description" content="Theodore Schultz coined "human capital" in 1961. Sixty years later, AI is systematically destroying mid-level skills while making root-level and canopy-level skills more valuable than ever. An interactive skill tree, disruption risk matrix, and full intellectual history.">
+  <meta property="og:url" content="https://thevalueshift.com/issues/human-capital">
+  <meta property="og:site_name" content="The Value Shift">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Root & Branch Problem — Human Capital from Schultz to AI | The Value Shift">
+  <meta name="twitter:description" content="Theodore Schultz coined "human capital" in 1961. Sixty years later, AI is systematically destroying mid-level skills while making root-level and canopy-level skills more valuable than ever. An interactive skill tree, disruption risk matrix, and full intellectual history.">
+  <meta name="twitter:site" content="@underlyingnarr">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Root & Branch Problem — Human Capital from Schultz to AI | The Value Shift",
+    "description": "Theodore Schultz coined "human capital" in 1961. Sixty years later, AI is systematically destroying mid-level skills while making root-level and canopy-level skills more valuable than ever. An interactive skill tree, disruption risk matrix, and full intellectual history.",
+    "url": "https://thevalueshift.com/issues/human-capital",
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Value Shift",
+      "url": "https://thevalueshift.com"
+    }
+  }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=IBM+Plex+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --forest:   #0D1F0F;
+  --moss:     #1C3A1E;
+  --fern:     #2D5A30;
+  --leaf:     #4A8C4E;
+  --sage:     #7DBF7E;
+  --mint:     #B8DFB9;
+  --cream:    #F4F0E6;
+  --paper:    #FAFAF5;
+  --gold:     #C8A84B;
+  --amber:    #E8C96A;
+  --rust:     #B5541E;
+  --bark:     #6B4226;
+  --mid:      #8A9E8B;
+  --rule:     rgba(125,191,126,0.2);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--forest);
+  color: var(--cream);
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse 80% 60% at 50% 80%, #142016 0%, var(--forest) 70%);
+  padding: 3rem 2rem;
+}
+
+/* Animated roots */
+.roots-svg {
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(74,140,78,0.15);
+  border: 1px solid rgba(125,191,126,0.3);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 2rem;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+.hero-badge::before { content: '🌳'; font-size: 0.9rem; }
+
+.hero-h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 700;
+  line-height: 1.0;
+  letter-spacing: -0.01em;
+  color: var(--cream);
+  margin-bottom: 0.5rem;
+  animation: fadeUp 0.8s ease 0.35s both;
+}
+
+.hero-h1 .accent { color: var(--sage); font-style: italic; }
+
+.hero-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--mid);
+  margin-bottom: 2rem;
+  animation: fadeUp 0.8s ease 0.5s both;
+}
+
+.hero-deck {
+  max-width: 620px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(244,240,230,0.65);
+  font-weight: 300;
+  animation: fadeUp 0.8s ease 0.65s both;
+  margin-bottom: 2.5rem;
+}
+
+.hero-scroll {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--leaf);
+  cursor: pointer;
+  animation: fadeUp 0.8s ease 0.8s both;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.hero-scroll:hover { color: var(--sage); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SECTION WRAPPER ── */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 2.5rem;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 1rem;
+}
+.section-label::before {
+  content: '';
+  width: 24px; height: 1px;
+  background: var(--sage);
+}
+
+.section-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+}
+
+/* ── EVOLUTION TIMELINE ── */
+.evo-bg {
+  background: var(--moss);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+
+.evo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 2rem;
+  border: 1px solid var(--rule);
+}
+
+.evo-card {
+  padding: 2rem 1.5rem;
+  border-right: 1px solid var(--rule);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease, background 0.3s;
+}
+.evo-card.vis { opacity: 1; transform: translateY(0); }
+.evo-card:last-child { border-right: none; }
+.evo-card:hover { background: rgba(74,140,78,0.08); }
+
+.evo-era {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+.evo-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+}
+.evo-who {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  color: var(--sage);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+}
+.evo-desc {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(244,240,230,0.6);
+  font-weight: 300;
+}
+
+.evo-arrow {
+  position: absolute;
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px; height: 28px;
+  background: var(--fern);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  z-index: 2;
+  border: 1px solid var(--rule);
+}
+
+/* ── SCHULTZ SPOTLIGHT ── */
+.schultz-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 1rem;
+}
+
+.schultz-quote-block {
+  position: relative;
+}
+.big-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  color: var(--fern);
+  line-height: 0.8;
+  margin-bottom: -1rem;
+  margin-left: -0.5rem;
+}
+.quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--cream);
+  border-left: 3px solid var(--leaf);
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.quote-attr {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--sage);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding-left: 1.5rem;
+}
+
+.schultz-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.fact-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: start;
+}
+.fact-row:last-child { border-bottom: none; }
+.fact-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--sage);
+  line-height: 1;
+}
+.fact-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 0.3rem;
+}
+.fact-body {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: rgba(244,240,230,0.65);
+  font-weight: 300;
+}
+
+/* ── TREE SECTION ── */
+.tree-bg {
+  background: linear-gradient(180deg, var(--forest) 0%, #0A1A0C 50%, var(--forest) 100%);
+  padding: 6rem 0;
+}
+.tree-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.tree-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+.tree-desc {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: rgba(244,240,230,0.65);
+  font-weight: 300;
+}
+.tree-desc strong { color: var(--mint); font-weight: 500; }
+
+.research-box {
+  background: rgba(45,90,48,0.25);
+  border: 1px solid rgba(125,191,126,0.2);
+  padding: 1.5rem;
+  border-radius: 2px;
+}
+.research-box-head {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(125,191,126,0.15);
+}
+.research-item {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(125,191,126,0.08);
+  align-items: flex-start;
+}
+.research-item:last-child { border-bottom: none; }
+.research-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--sage);
+  margin-top: 0.45rem;
+  flex-shrink: 0;
+}
+.research-text {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: rgba(244,240,230,0.7);
+}
+.research-text em { color: var(--amber); font-style: normal; font-weight: 500; }
+
+/* THE LIVING TREE */
+.tree-canvas-wrap {
+  text-align: center;
+  margin: 2rem 0 3rem;
+  position: relative;
+}
+
+.tree-canvas-wrap canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+.tree-legend {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.legend-item {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  padding: 1.2rem;
+  border: 1px solid var(--rule);
+  background: rgba(28,58,30,0.4);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.legend-item:hover { background: rgba(74,140,78,0.12); border-color: rgba(125,191,126,0.35); }
+.legend-item.active { background: rgba(74,140,78,0.2); border-color: var(--sage); }
+.legend-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+.legend-name {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--cream);
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+.legend-desc {
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: rgba(244,240,230,0.5);
+  font-weight: 300;
+}
+
+/* ── AI DISRUPTION ── */
+.ai-section-bg {
+  background: #080E09;
+  border-top: 1px solid var(--rule);
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.threat-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 1rem;
+}
+
+.threat-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 80px;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.threat-row.vis { opacity: 1; transform: translateX(0); }
+.threat-row:first-child { border-top: 1px solid var(--rule); }
+
+.threat-skill { font-size: 0.88rem; color: var(--cream); font-weight: 400; }
+.threat-skill small { display: block; font-size: 0.72rem; color: var(--mid); font-weight: 300; margin-top: 0.1rem; }
+
+.risk-pill {
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.risk-high { background: rgba(181,84,30,0.2); color: #E8885A; border: 1px solid rgba(181,84,30,0.3); }
+.risk-med  { background: rgba(200,168,75,0.15); color: var(--amber); border: 1px solid rgba(200,168,75,0.3); }
+.risk-low  { background: rgba(74,140,78,0.15); color: var(--sage); border: 1px solid rgba(74,140,78,0.3); }
+
+.threat-headers {
+  display: grid;
+  grid-template-columns: 1fr 80px 80px;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  color: var(--mid);
+  text-transform: uppercase;
+}
+
+.ai-argument {
+  margin-top: 1rem;
+}
+.arg-card {
+  background: rgba(28,58,30,0.3);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.arg-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 100%;
+}
+.arg-card.for::before { background: var(--sage); }
+.arg-card.against::before { background: var(--rust); }
+
+.arg-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+.arg-card.for .arg-label { color: var(--sage); }
+.arg-card.against .arg-label { color: #E8885A; }
+
+.arg-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--cream);
+}
+.arg-body {
+  font-size: 0.83rem;
+  line-height: 1.7;
+  color: rgba(244,240,230,0.6);
+  font-weight: 300;
+}
+
+/* ── FUTURE SECTION ── */
+.future-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.future-card {
+  padding: 1.8rem;
+  border: 1px solid var(--rule);
+  background: rgba(28,58,30,0.2);
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease, background 0.3s, border-color 0.3s;
+}
+.future-card.vis { opacity: 1; transform: translateY(0); }
+.future-card:hover { background: rgba(74,140,78,0.1); border-color: rgba(125,191,126,0.35); }
+
+.future-icon { font-size: 1.8rem; margin-bottom: 1rem; display: block; }
+.future-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--cream);
+}
+.future-body {
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: rgba(244,240,230,0.55);
+  font-weight: 300;
+}
+.future-body strong { color: var(--mint); font-weight: 500; }
+
+/* ── CLOSING STATEMENT ── */
+.closing {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: var(--moss);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.closing-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 3vw, 2.4rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--cream);
+  max-width: 780px;
+  margin: 0 auto 1.2rem;
+}
+.closing-quote em { color: var(--sage); font-style: normal; }
+.closing-attr {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--mid);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* ── FOOTER ── */
+.footer {
+  padding: 1.5rem 2.5rem;
+  background: var(--forest);
+  display: flex;
+  justify-content: space-between;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  color: var(--mid);
+  text-transform: uppercase;
+  border-top: 1px solid rgba(125,191,126,0.08);
+}
+
+/* ── DIVIDER ── */
+.leaf-divider {
+  text-align: center;
+  padding: 1rem 0;
+  color: var(--fern);
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .evo-grid { grid-template-columns: 1fr 1fr; }
+  .schultz-wrap { grid-template-columns: 1fr; }
+  .tree-intro { grid-template-columns: 1fr; }
+  .ai-grid { grid-template-columns: 1fr; }
+  .future-grid { grid-template-columns: 1fr; }
+  .tree-legend { grid-template-columns: 1fr; }
+  .footer { flex-direction: column; gap: 0.5rem; }
+}
+</style>
+</head>
+<body>
+<!-- MOBILE NOTE -->
+<div id="mobileNote" style="
+  display:none;
+  background:rgba(0,0,0,0.85);
+  color:rgba(255,255,255,0.7);
+  text-align:center;
+  padding:0.5rem 1rem;
+  font-size:0.65rem;
+  letter-spacing:0.12em;
+  font-family:monospace;
+  text-transform:uppercase;
+  position:relative;
+  z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+">
+  ✦ Best experienced on desktop
+</div>
+<script>
+  if (window.innerWidth < 768) document.getElementById('mobileNote').style.display = 'block';
+</script>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="roots-svg" viewBox="0 0 900 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M450 0 C450 80 350 120 200 180 C100 220 20 240 0 300" stroke="#4A8C4E" stroke-width="2" fill="none" opacity="0.6"/>
+    <path d="M450 0 C450 60 380 100 300 150 C230 195 180 240 160 300" stroke="#4A8C4E" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M450 0 C450 70 420 130 400 200 C385 250 370 275 360 300" stroke="#2D5A30" stroke-width="2" fill="none"/>
+    <path d="M450 0 C455 50 460 100 450 160 C442 210 440 260 440 300" stroke="#4A8C4E" stroke-width="3" fill="none"/>
+    <path d="M450 0 C460 70 490 120 520 180 C545 225 560 260 540 300" stroke="#2D5A30" stroke-width="2" fill="none"/>
+    <path d="M450 0 C465 60 510 100 580 150 C640 192 690 235 720 300" stroke="#4A8C4E" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M450 0 C470 80 560 120 700 180 C800 220 880 240 900 300" stroke="#4A8C4E" stroke-width="2" fill="none" opacity="0.6"/>
+    <!-- secondary roots -->
+    <path d="M380 60 C340 100 280 130 220 170" stroke="#1C3A1E" stroke-width="1" fill="none" opacity="0.8"/>
+    <path d="M420 40 C390 70 360 110 340 150" stroke="#1C3A1E" stroke-width="1" fill="none" opacity="0.6"/>
+    <path d="M460 50 C480 90 500 130 510 170" stroke="#1C3A1E" stroke-width="1" fill="none" opacity="0.6"/>
+    <path d="M490 55 C530 95 570 125 620 160" stroke="#1C3A1E" stroke-width="1" fill="none" opacity="0.8"/>
+  </svg>
+
+  <div class="hero-badge">Human Capital · Nested Skills · The AI Era</div>
+  <h1 class="hero-h1">The <em>Root</em> &<br>Branch Problem</h1>
+  <p class="hero-sub">From Theodore Schultz to Generative AI</p>
+  <p class="hero-deck">Why the skills that power the economy are structured like trees — and why cutting the roots to chase the branches has always been civilization's most expensive mistake.</p>
+  <div class="hero-scroll" onclick="document.getElementById('evo').scrollIntoView({behavior:'smooth'})">
+    Explore ↓
+  </div>
+</section>
+
+<!-- EVOLUTION TIMELINE -->
+<section class="evo-bg" id="evo">
+  <div class="section">
+    <div class="section-label">Chapter I</div>
+    <h2 class="section-h2">How We Learned to Value<br>the Mind as Capital</h2>
+    <div class="evo-grid">
+      <div class="evo-card" data-d="0">
+        <div class="evo-era">1950s–60s</div>
+        <div class="evo-name">The Founding Insight</div>
+        <div class="evo-who">Theodore W. Schultz · U. of Chicago</div>
+        <div class="evo-desc">Schultz noticed something economists ignored: after WWII, war-devastated countries recovered far faster than their destroyed physical capital should have allowed. The reason? Their <em>people</em> still had skills, literacy, and judgment. He coined "human capital" in 1961 and won the Nobel Prize in 1979. His radical claim: investing in people's education and health is as economically rational as investing in machinery.</div>
+        <div class="evo-arrow">→</div>
+      </div>
+      <div class="evo-card" data-d="1">
+        <div class="evo-era">1960s–80s</div>
+        <div class="evo-name">Formalizing the Theory</div>
+        <div class="evo-who">Gary Becker · Jacob Mincer</div>
+        <div class="evo-desc">Gary Becker (also Chicago) built the mathematical framework in his 1964 book <em>Human Capital</em>, distinguishing "general" skills (portable across employers) from "firm-specific" skills. Jacob Mincer quantified how education years translate to wage premiums. The "Mincer equation" became the most estimated equation in economics. Human capital moved from metaphor to measurement.</div>
+        <div class="evo-arrow">→</div>
+      </div>
+      <div class="evo-card" data-d="2">
+        <div class="evo-era">1990s–2010s</div>
+        <div class="evo-name">The Nested Skill Discovery</div>
+        <div class="evo-who">Heckman · Harvard Growth Lab</div>
+        <div class="evo-desc">James Heckman (Nobel 2000) proved skills beget skills — early childhood investment yields the highest lifetime returns. Harvard's Growth Lab showed skills aren't a flat list but a hierarchy: foundational cognitive and social skills enable all other skill development. Skills exist in <strong>nested structures</strong>. This was the "tree model" emerging from data.</div>
+        <div class="evo-arrow">→</div>
+      </div>
+      <div class="evo-card" data-d="3">
+        <div class="evo-era">2020s–Now</div>
+        <div class="evo-name">The AI Stress Test</div>
+        <div class="evo-who">Daron Acemoglu · Erik Brynjolfsson</div>
+        <div class="evo-desc">AI challenges every assumption. Which skills survive automation? MIT's work shows AI disproportionately replaces intermediate, routine skills — sparing both the highest cognitive roots and the uniquely human branches (creativity, judgment, care). The nested structure suddenly becomes a survival map: those with strong roots are protected; those with only mid-level branches are most vulnerable.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHULTZ SPOTLIGHT -->
+<section>
+  <div class="section">
+    <div class="section-label">Chapter II</div>
+    <h2 class="section-h2">Schultz's Radical Idea</h2>
+    <div class="schultz-wrap">
+      <div class="schultz-quote-block">
+        <div class="big-quote">"</div>
+        <p class="quote-text">Consider all human abilities to be either innate or acquired. Every person is born with a particular set of genes. The abilities he acquires during his life are his human capital.</p>
+        <p class="quote-attr">— Theodore W. Schultz, Nobel Lecture, 1979</p>
+        <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--rule);">
+          <p style="font-size:0.9rem;line-height:1.8;color:rgba(244,240,230,0.6);font-weight:300;">Before Schultz, mainstream economics treated labor as interchangeable — a commodity like steel or coal. Workers were units of production, not assets to develop. Schultz reframed everything: <strong style="color:var(--mint);">the worker IS the asset.</strong> Spending on education and health wasn't consumption (money spent and gone) — it was <em>investment</em> with measurable future returns. This wasn't philosophy. He proved it with data from post-war Japan and Germany.</p>
+        </div>
+      </div>
+      <div class="schultz-facts">
+        <div class="fact-row">
+          <div>
+            <div class="fact-num">7–12%</div>
+            <div class="fact-label">Annual return</div>
+          </div>
+          <div>
+            <div class="fact-body">Estimated annual return on education investment in developed economies — comparable to or exceeding returns on physical capital. Becker's calculations made education an objectively rational investment.</div>
+          </div>
+        </div>
+        <div class="fact-row">
+          <div>
+            <div class="fact-num">1961</div>
+            <div class="fact-label">The AER paper</div>
+          </div>
+          <div>
+            <div class="fact-body">Schultz's "Investment in Human Capital" in the American Economic Review is where the term was formally coined. It changed how governments, corporations, and individuals think about spending on people.</div>
+          </div>
+        </div>
+        <div class="fact-row">
+          <div>
+            <div class="fact-num">$0</div>
+            <div class="fact-label">Physical capital left</div>
+          </div>
+          <div>
+            <div class="fact-body">Japan and West Germany had near-zero physical capital after WWII yet recovered within a decade. Schultz's insight: their human capital — skills, literacy, institutional knowledge — survived the bombs.</div>
+          </div>
+        </div>
+        <div class="fact-row">
+          <div>
+            <div class="fact-num">3×</div>
+            <div class="fact-label">Early childhood ROI</div>
+          </div>
+          <div>
+            <div class="fact-body">Heckman's later work (building on Schultz) showed that every $1 invested in early childhood education returns $3–13 in lifetime economic value — the highest ROI of any human capital investment.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE LIVING TREE -->
+<section class="tree-bg" id="tree">
+  <div class="tree-inner">
+    <div class="section-label">Chapter III</div>
+    <h2 class="section-h2" style="margin-bottom:1rem;">The Nested Structure of Skills</h2>
+    <div class="tree-intro">
+      <p class="tree-desc">Harvard's Growth Lab and Heckman's research converged on a striking finding: <strong>skills are not a flat list</strong> — they exist in hierarchical, nested structures, like a tree. Foundational skills form the trunk and roots. Without them, the specialized branches above cannot grow, hold, or generate value. The higher you go in the tree, the higher the wages — but <em>only because the lower layers already exist</em>. Cut the roots, and the branches die.</p>
+      <div class="research-box">
+        <div class="research-box-head">Research Findings</div>
+        <div class="research-item">
+          <div class="research-dot"></div>
+          <div class="research-text">Harvard Growth Lab: Skills cluster in <em>"relatedness networks"</em> — new skills are only acquirable when adjacent foundation skills exist. You cannot jump levels.</div>
+        </div>
+        <div class="research-item">
+          <div class="research-dot"></div>
+          <div class="research-text">Heckman: Skill formation follows a <em>multiplier effect</em> — early foundational skills make every subsequent skill cheaper and faster to acquire throughout life.</div>
+        </div>
+        <div class="research-item">
+          <div class="research-dot"></div>
+          <div class="research-text">World Bank data: Countries with strong foundational literacy and numeracy show <em>3–5x higher returns</em> on technical skills training than those without the foundation.</div>
+        </div>
+        <div class="research-item">
+          <div class="research-dot"></div>
+          <div class="research-text">MIT (2023): Wage premiums for specialized skills are <em>inseparable</em> from foundation skills in wage regressions — you cannot earn the branch premium without the trunk.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CANVAS TREE -->
+    <div class="tree-canvas-wrap">
+      <canvas id="treeCanvas" width="860" height="620"></canvas>
+    </div>
+
+    <div class="tree-legend">
+      <div class="legend-item active" onclick="highlightLayer(0, this)">
+        <div class="legend-dot" style="background:#6B4226;"></div>
+        <div>
+          <div class="legend-name">Roots · Soil</div>
+          <div class="legend-desc">Curiosity, emotional intelligence, resilience, motivation, ethical judgment. Pre-cognitive foundations that determine capacity for all learning.</div>
+        </div>
+      </div>
+      <div class="legend-item" onclick="highlightLayer(1, this)">
+        <div class="legend-dot" style="background:#4A8C4E;"></div>
+        <div>
+          <div class="legend-name">Trunk · Core Cognition</div>
+          <div class="legend-desc">Reading comprehension, critical thinking, numeracy, communication, problem decomposition. The load-bearing layer. Nothing above exists without this.</div>
+        </div>
+      </div>
+      <div class="legend-item" onclick="highlightLayer(2, this)">
+        <div class="legend-dot" style="background:#7DBF7E;"></div>
+        <div>
+          <div class="legend-name">Primary Branches · Applied Skills</div>
+          <div class="legend-desc">Data analysis, project management, research synthesis, technical writing, systems thinking. Mid-tier — highly valued, quickly evolving.</div>
+        </div>
+      </div>
+      <div class="legend-item" onclick="highlightLayer(3, this)">
+        <div class="legend-dot" style="background:#B8DFB9;"></div>
+        <div>
+          <div class="legend-name">Secondary Branches · Specializations</div>
+          <div class="legend-desc">Machine learning, financial modeling, biomedical research, UX design, software engineering. High-wage but dependent on every layer below.</div>
+        </div>
+      </div>
+      <div class="legend-item" onclick="highlightLayer(4, this)">
+        <div class="legend-dot" style="background:#C8A84B;"></div>
+        <div>
+          <div class="legend-name">Leaves · Micro-Skills</div>
+          <div class="legend-desc">Specific tools, frameworks, languages. Highest turnover — often replaced by AI first. Cannot be "just learned" without the branch they grow from.</div>
+        </div>
+      </div>
+      <div class="legend-item" onclick="highlightLayer(5, this)">
+        <div class="legend-dot" style="background:#E8C96A;"></div>
+        <div>
+          <div class="legend-name">Canopy · Human Uniqueness</div>
+          <div class="legend-desc">Creative synthesis, moral leadership, empathy-driven innovation, irreducible judgment. The frontier AI currently cannot replicate — but only reachable via the trunk.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI DISRUPTION -->
+<section class="ai-section-bg">
+  <div class="section">
+    <div class="section-label">Chapter IV</div>
+    <h2 class="section-h2">What AI Does to the Tree</h2>
+    <div class="ai-grid">
+      <div>
+        <p style="font-size:0.92rem;line-height:1.8;color:rgba(244,240,230,0.6);font-weight:300;margin-bottom:1.5rem;">AI doesn't attack the tree randomly. It attacks specific layers — and the pattern has profound implications for education, wages, and which skills still command premiums. The key finding: AI first displaces <strong style="color:var(--mint);">mid-level branches</strong>, not roots or canopy. This counter-intuitively makes foundational skills <em>more</em> valuable, not less.</p>
+        <div class="threat-headers">
+          <span>Skill Type</span>
+          <span style="text-align:center">AI Risk</span>
+          <span style="text-align:center">Wage Trend</span>
+        </div>
+        <div class="threat-matrix" id="threatMatrix">
+          <div class="threat-row" data-d="0">
+            <div class="threat-skill">Micro-tool proficiency<small>Excel formulas, specific coding syntax, data entry</small></div>
+            <div class="risk-pill risk-high">High</div>
+            <div class="risk-pill risk-high">↓ Fall</div>
+          </div>
+          <div class="threat-row" data-d="1">
+            <div class="threat-skill">Routine cognitive tasks<small>Report writing, basic research, template analysis</small></div>
+            <div class="risk-pill risk-high">High</div>
+            <div class="risk-pill risk-high">↓ Fall</div>
+          </div>
+          <div class="threat-row" data-d="2">
+            <div class="threat-skill">Mid-level technical skills<small>Basic ML implementation, standard financial modeling</small></div>
+            <div class="risk-pill risk-med">Medium</div>
+            <div class="risk-pill risk-med">→ Flat</div>
+          </div>
+          <div class="threat-row" data-d="3">
+            <div class="threat-skill">Critical thinking & synthesis<small>Reading comprehension, argument evaluation, research design</small></div>
+            <div class="risk-pill risk-low">Low</div>
+            <div class="risk-pill risk-low">↑ Rise</div>
+          </div>
+          <div class="threat-row" data-d="4">
+            <div class="threat-skill">Communication & persuasion<small>Negotiation, teaching, narrative framing</small></div>
+            <div class="risk-pill risk-low">Low</div>
+            <div class="risk-pill risk-low">↑ Rise</div>
+          </div>
+          <div class="threat-row" data-d="5">
+            <div class="threat-skill">Emotional intelligence & leadership<small>Team motivation, conflict resolution, ethical judgment</small></div>
+            <div class="risk-pill risk-low">Very Low</div>
+            <div class="risk-pill risk-low">↑↑ Rise</div>
+          </div>
+          <div class="threat-row" data-d="6">
+            <div class="threat-skill">Creative synthesis & innovation<small>Novel problem framing, cross-domain insight generation</small></div>
+            <div class="risk-pill risk-low">Very Low</div>
+            <div class="risk-pill risk-low">↑↑ Rise</div>
+          </div>
+        </div>
+        <p style="font-size:0.75rem;color:var(--mid);margin-top:1rem;font-family:'IBM Plex Mono',monospace;letter-spacing:0.05em;">Source: Acemoglu & Restrepo (2022), McKinsey Global Institute (2023), MIT Work of the Future Task Force</p>
+      </div>
+      <div class="ai-argument">
+        <div class="arg-card for">
+          <div class="arg-label">✦ The Optimist Case</div>
+          <div class="arg-title">AI as Root Amplifier</div>
+          <div class="arg-body">For those with strong foundational skills, AI is a force multiplier. A person with excellent critical thinking and communication can now do the work of a team — AI handles the branches while the human guides from the roots and canopy. The return to strong foundational education may be the highest in history precisely because AI handles what previously required mid-level specialists.</div>
+        </div>
+        <div class="arg-card against">
+          <div class="arg-label">⚠ The Warning</div>
+          <div class="arg-title">The Hollowing-Out Risk</div>
+          <div class="arg-body">If mid-level skills disappear, the traditional pathway from foundation to canopy breaks. A medical student once learned clinical reasoning by doing routine tasks first. If AI does all the routine work, junior workers lose the scaffolding to develop depth. The branches that AI displaces were also the training ground for building canopy-level mastery. Education systems haven't solved this yet.</div>
+        </div>
+        <div class="arg-card for">
+          <div class="arg-label">✦ The Research Verdict</div>
+          <div class="arg-title">Broad-Based Education Wins</div>
+          <div class="arg-body">Harvard Growth Lab, Heckman's lab, and MIT consistently show: the workers and economies that fare best in technological transitions are those with the deepest foundational preparation — not the most narrowly trained specialists. Broad, rigorous general education produces the flexible cognitive architecture that can grow new branches as the economy demands them.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUTURE IMPLICATIONS -->
+<section>
+  <div class="section">
+    <div class="section-label">Chapter V</div>
+    <h2 class="section-h2">Implications for Individuals,<br>Institutions & Policy</h2>
+    <div class="future-grid">
+      <div class="future-card" data-d="0">
+        <span class="future-icon">🎓</span>
+        <div class="future-title">The Case for Liberal Education</div>
+        <div class="future-body">The data vindicate the classical liberal arts model. <strong>Reading widely, arguing rigorously, thinking historically</strong> — these build the trunk. Students who study only marketable tools learn branches that AI will later replace; students who build the trunk can always grow new branches. The irony of the AI era: a philosophy degree may outperform a narrow technical one.</div>
+      </div>
+      <div class="future-card" data-d="1">
+        <span class="future-icon">🏢</span>
+        <div class="future-title">What Employers Must Rethink</div>
+        <div class="future-body">Skill-based hiring that screens for specific tools misses the point. <strong>The tool is replaceable; the underlying cognition is not.</strong> Forward-looking employers are shifting to evaluate reasoning ability, learning agility, and communication — the trunk skills — and treating tool knowledge as teachable on the job. The "years of Excel experience" job posting is becoming obsolete.</div>
+      </div>
+      <div class="future-card" data-d="2">
+        <span class="future-icon">🌍</span>
+        <div class="future-title">The Global Inequality Risk</div>
+        <div class="future-body">Countries and communities that under-invest in foundational education face a structural trap: their workers can't access the canopy, and AI is displacing the middle. <strong>The skill tree becomes a ladder only for those who built the trunk.</strong> This makes early childhood and broad K-12 investment not just socially just — but economically urgent for national competitiveness.</div>
+      </div>
+      <div class="future-card" data-d="3">
+        <span class="future-icon">🔄</span>
+        <div class="future-title">The Lifelong Learning Imperative</div>
+        <div class="future-body">Schultz argued for continuous human capital investment across life stages. The AI era makes this urgent. But Heckman's data shows lifelong learning is most effective for those with strong early foundations. <strong>Adult retraining works best as branch-grafting onto an existing trunk</strong> — not as building a tree from scratch at age 45.</div>
+      </div>
+      <div class="future-card" data-d="4">
+        <span class="future-icon">🤝</span>
+        <div class="future-title">Human Skills as Moat</div>
+        <div class="future-body">The highest-value human skills in the AI era are precisely those embedded in the canopy: ethical reasoning, empathy, creative synthesis, and the <strong>ability to ask the right question</strong> — not just execute an answer. These cannot be separated from their foundation. You can't prompt your way to wisdom without having built the cognition that evaluates the output.</div>
+      </div>
+      <div class="future-card" data-d="5">
+        <span class="future-icon">📐</span>
+        <div class="future-title">Measuring What Matters</div>
+        <div class="future-body">PISA, PIRLS, and national assessments have begun tracking foundational skill depth, not just coverage. The shift: <strong>from "what was taught" to "how deeply can the student reason."</strong> Countries like Finland and Singapore invested decades in trunk-building. Their workers consistently outperform in technological transitions — not despite their broad education, but because of it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing">
+  <p class="closing-quote">"The question was never whether to invest in people. The question Schultz answered — and AI has now made <em>urgent</em> — is which layer of the human tree you invest in. Everything else grows from the roots."</p>
+  <p class="closing-attr">Synthesis · Schultz (1961) · Heckman (2000) · Harvard Growth Lab (2019) · MIT Work of the Future (2023)</p>
+</section>
+
+<div class="footer">
+  <span>Human Capital: From Schultz to AI · Nested Skill Structures</span>
+  <span>Research: Chicago · Harvard · MIT · World Bank</span>
+</div>
+
+<script>
+// ── INTERSECTION OBSERVERS ──
+const makeObs = (selector, cls, delayKey) => {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const d = parseInt(e.target.dataset[delayKey || 'd'] || 0);
+        setTimeout(() => e.target.classList.add(cls), d * 100);
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll(selector).forEach(el => obs.observe(el));
+};
+
+makeObs('.evo-card', 'vis', 'd');
+makeObs('.threat-row', 'vis', 'd');
+makeObs('.future-card', 'vis', 'd');
+
+// ── TREE CANVAS ──
+const canvas = document.getElementById('treeCanvas');
+const ctx = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+
+let highlightedLayer = -1; // -1 = all visible
+
+const layers = {
+  roots: { color: '#6B4226', alpha: 1 },
+  trunk: { color: '#2D5A30', alpha: 1 },
+  primary: { color: '#4A8C4E', alpha: 1 },
+  secondary: { color: '#7DBF7E', alpha: 1 },
+  leaves: { color: '#C8A84B', alpha: 1 },
+  canopy: { color: '#E8C96A', alpha: 1 },
+};
+
+function lerpColor(hex, alpha) {
+  const r = parseInt(hex.slice(1,3),16);
+  const g = parseInt(hex.slice(3,5),16);
+  const b = parseInt(hex.slice(5,7),16);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
+function drawTree(hlayer) {
+  ctx.clearRect(0, 0, W, H);
+
+  const cx = W / 2;
+  const groundY = H - 60;
+  const trunkW = 28;
+  const trunkH = 160;
+  const trunkTop = groundY - trunkH;
+
+  // ── GROUND ──
+  ctx.fillStyle = lerpColor('#0D1F0F', 1);
+  ctx.fillRect(0, groundY, W, H - groundY);
+
+  // ── GROUND LINE ──
+  ctx.strokeStyle = lerpColor('#2D5A30', 0.4);
+  ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(0, groundY); ctx.lineTo(W, groundY); ctx.stroke();
+
+  // ── ROOTS ──
+  const rootAlpha = hlayer < 0 || hlayer === 0 ? 1 : 0.12;
+  const rootColor = lerpColor('#6B4226', rootAlpha);
+  const rootLines = [
+    [cx, groundY, cx - 160, groundY + 50],
+    [cx, groundY, cx - 90, groundY + 40],
+    [cx, groundY, cx - 30, groundY + 35],
+    [cx, groundY, cx + 30, groundY + 35],
+    [cx, groundY, cx + 90, groundY + 40],
+    [cx, groundY, cx + 160, groundY + 50],
+    [cx - 90, groundY + 40, cx - 200, groundY + 58],
+    [cx + 90, groundY + 40, cx + 200, groundY + 58],
+    [cx - 30, groundY + 35, cx - 50, groundY + 55],
+    [cx + 30, groundY + 35, cx + 50, groundY + 55],
+  ];
+  rootLines.forEach(([x1,y1,x2,y2], i) => {
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    const cp1x = x1 + (x2-x1)*0.3 + (Math.random()*10-5);
+    const cp1y = y1 + (y2-y1)*0.5;
+    ctx.quadraticCurveTo(cp1x, cp1y, x2, y2);
+    ctx.strokeStyle = rootColor;
+    ctx.lineWidth = i < 6 ? 4 - i*0.3 : 2;
+    ctx.lineCap = 'round';
+    ctx.stroke();
+  });
+
+  // root label
+  if (rootAlpha > 0.3) {
+    ctx.fillStyle = lerpColor('#8B6020', rootAlpha);
+    ctx.font = '500 11px IBM Plex Mono';
+    ctx.textAlign = 'center';
+    ctx.fillText('ROOTS · Curiosity · Resilience · Emotional Intelligence · Ethics', cx, groundY + 45);
+  }
+
+  // ── TRUNK ──
+  const trunkAlpha = hlayer < 0 || hlayer === 1 ? 1 : 0.12;
+  const gradient = ctx.createLinearGradient(cx - trunkW, groundY, cx + trunkW, groundY);
+  gradient.addColorStop(0, lerpColor('#1C3A1E', trunkAlpha));
+  gradient.addColorStop(0.4, lerpColor('#2D5A30', trunkAlpha));
+  gradient.addColorStop(1, lerpColor('#1C3A1E', trunkAlpha));
+  ctx.beginPath();
+  ctx.moveTo(cx - trunkW, groundY);
+  ctx.lineTo(cx - trunkW * 0.7, trunkTop);
+  ctx.lineTo(cx + trunkW * 0.7, trunkTop);
+  ctx.lineTo(cx + trunkW, groundY);
+  ctx.closePath();
+  ctx.fillStyle = gradient;
+  ctx.fill();
+
+  // trunk labels
+  if (trunkAlpha > 0.3) {
+    ctx.save();
+    ctx.translate(cx + trunkW + 12, trunkTop + trunkH * 0.5);
+    ctx.rotate(0);
+    ctx.fillStyle = lerpColor('#7DBF7E', trunkAlpha * 0.8);
+    ctx.font = '400 10px IBM Plex Mono';
+    ctx.textAlign = 'left';
+    const trunkSkills = ['Critical Thinking', 'Reading Comprehension', 'Numeracy', 'Communication', 'Problem Solving'];
+    trunkSkills.forEach((s, i) => {
+      ctx.fillText('· ' + s, 0, i * 16 - 30);
+    });
+    ctx.restore();
+  }
+
+  // ── BRANCH HELPER ──
+  function drawBranch(x1, y1, x2, y2, width, color, alpha, label, labelSide) {
+    const a = hlayer < 0 ? alpha : (hlayer === 2 ? alpha : 0.1);
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    const cpx = x1 + (x2-x1)*0.3;
+    const cpy = y1 - 20;
+    ctx.quadraticCurveTo(cpx, cpy, x2, y2);
+    ctx.strokeStyle = lerpColor(color, a);
+    ctx.lineWidth = width;
+    ctx.lineCap = 'round';
+    ctx.stroke();
+
+    if (label && a > 0.3) {
+      ctx.fillStyle = lerpColor('#B8DFB9', a * 0.9);
+      ctx.font = '400 10px IBM Plex Mono';
+      ctx.textAlign = labelSide === 'right' ? 'left' : 'right';
+      ctx.fillText(label, x2 + (labelSide === 'right' ? 8 : -8), y2 + 4);
+    }
+  }
+
+  // ── PRIMARY BRANCHES (Layer 2) ──
+  const pb = [
+    [cx, trunkTop, cx - 180, trunkTop - 80, 8, '#4A8C4E', 'Data Analysis', 'left'],
+    [cx, trunkTop, cx - 100, trunkTop - 110, 7, '#4A8C4E', 'Research Synthesis', 'left'],
+    [cx, trunkTop, cx - 20, trunkTop - 130, 8, '#4A8C4E', 'Systems Thinking', 'left'],
+    [cx, trunkTop, cx + 60, trunkTop - 120, 7, '#4A8C4E', 'Technical Writing', 'right'],
+    [cx, trunkTop, cx + 140, trunkTop - 100, 8, '#4A8C4E', 'Project Management', 'right'],
+    [cx, trunkTop, cx + 210, trunkTop - 70, 7, '#4A8C4E', 'Strategic Planning', 'right'],
+  ];
+  pb.forEach(([x1,y1,x2,y2,w,c,l,ls]) => {
+    const a = hlayer < 0 || hlayer === 2 ? 1 : 0.08;
+    ctx.beginPath();
+    ctx.moveTo(x1, y1);
+    const cpx = x1 + (x2-x1)*0.4;
+    const cpy = y1 - 15;
+    ctx.quadraticCurveTo(cpx, cpy, x2, y2);
+    ctx.strokeStyle = lerpColor(c, a);
+    ctx.lineWidth = w;
+    ctx.lineCap = 'round';
+    ctx.stroke();
+    if (l && a > 0.3) {
+      ctx.fillStyle = lerpColor('#B8DFB9', a * 0.9);
+      ctx.font = '400 10px IBM Plex Mono';
+      ctx.textAlign = ls === 'right' ? 'left' : 'right';
+      ctx.fillText(l, x2 + (ls === 'right' ? 8 : -8), y2 + 4);
+    }
+  });
+
+  // ── SECONDARY BRANCHES (Layer 3) ──
+  const endPts = [
+    [cx - 180, trunkTop - 80],
+    [cx - 100, trunkTop - 110],
+    [cx - 20, trunkTop - 130],
+    [cx + 60, trunkTop - 120],
+    [cx + 140, trunkTop - 100],
+    [cx + 210, trunkTop - 70],
+  ];
+  const sbLabels = [
+    ['ML Engineering', 'Econometrics'],
+    ['Biomedical Research', 'Policy Analysis'],
+    ['Software Architecture', 'UX Research'],
+    ['Financial Modeling', 'Product Strategy'],
+    ['Legal Analysis', 'Data Science'],
+    ['Operations Research', 'Brand Strategy'],
+  ];
+  endPts.forEach(([bx, by], bi) => {
+    const a = hlayer < 0 || hlayer === 3 ? 1 : 0.07;
+    const side = bi < 3 ? 'left' : 'right';
+    sbLabels[bi].forEach((label, li) => {
+      const offsetX = (li % 2 === 0 ? -1 : 1) * 35 + (side === 'left' ? -20 : 20);
+      const offsetY = -40 - li * 28;
+      ctx.beginPath();
+      ctx.moveTo(bx, by);
+      ctx.lineTo(bx + offsetX, by + offsetY);
+      ctx.strokeStyle = lerpColor('#7DBF7E', a);
+      ctx.lineWidth = 3.5;
+      ctx.lineCap = 'round';
+      ctx.stroke();
+      if (a > 0.3) {
+        ctx.fillStyle = lerpColor('#B8DFB9', a * 0.7);
+        ctx.font = '300 9px IBM Plex Mono';
+        ctx.textAlign = side === 'left' ? 'right' : 'left';
+        ctx.fillText(label, bx + offsetX + (side === 'left' ? -5 : 5), by + offsetY - 2);
+      }
+    });
+  });
+
+  // ── LEAVES (Layer 4) ──
+  const leafPositions = [];
+  endPts.forEach(([bx, by], bi) => {
+    sbLabels[bi].forEach((_, li) => {
+      const side = bi < 3 ? 'left' : 'right';
+      const offsetX = (li % 2 === 0 ? -1 : 1) * 35 + (side === 'left' ? -20 : 20);
+      const offsetY = -40 - li * 28;
+      const tx = bx + offsetX;
+      const ty = by + offsetY;
+      leafPositions.push([tx, ty, side]);
+    });
+  });
+
+  const leafA = hlayer < 0 || hlayer === 4 ? 1 : 0.06;
+  const microSkills = ['Python','SQL','Tableau','SPSS','AutoCAD','Figma','Salesforce','TensorFlow','R','Stata','MATLAB','Jira','Sketch','QGIS','Power BI'];
+  leafPositions.forEach(([lx, ly, side], i) => {
+    for (let j = 0; j < 2; j++) {
+      const ex = lx + (side === 'left' ? -1 : 1) * (15 + j * 25) * (Math.random() * 0.5 + 0.75);
+      const ey = ly - 15 - j * 14;
+      // leaf shape
+      ctx.beginPath();
+      ctx.ellipse(ex, ey, 22, 8, side === 'left' ? -0.4 : 0.4, 0, Math.PI * 2);
+      ctx.fillStyle = lerpColor('#C8A84B', leafA * 0.5);
+      ctx.fill();
+      ctx.strokeStyle = lerpColor('#C8A84B', leafA * 0.7);
+      ctx.lineWidth = 0.5;
+      ctx.stroke();
+      if (leafA > 0.3 && i * 2 + j < microSkills.length) {
+        ctx.fillStyle = lerpColor('#F4F0E6', leafA * 0.8);
+        ctx.font = '300 7.5px IBM Plex Mono';
+        ctx.textAlign = 'center';
+        ctx.fillText(microSkills[i * 2 + j] || '', ex, ey + 3);
+      }
+    }
+  });
+
+  // ── CANOPY (Layer 5) ──
+  const canopyA = hlayer < 0 || hlayer === 5 ? 1 : 0.07;
+  // cloud-like canopy clusters at top
+  const canopyCenters = [
+    [cx - 120, trunkTop - 180],
+    [cx, trunkTop - 220],
+    [cx + 120, trunkTop - 180],
+  ];
+  const canopyLabels = ['Creative Synthesis\n& Innovation', 'Moral Leadership\n& Judgment', 'Empathy-Driven\nDesign'];
+  canopyCenters.forEach(([ccx, ccy], ci) => {
+    // glow
+    const grd = ctx.createRadialGradient(ccx, ccy, 10, ccx, ccy, 70);
+    grd.addColorStop(0, lerpColor('#E8C96A', canopyA * 0.25));
+    grd.addColorStop(1, lerpColor('#E8C96A', 0));
+    ctx.beginPath();
+    ctx.arc(ccx, ccy, 70, 0, Math.PI * 2);
+    ctx.fillStyle = grd;
+    ctx.fill();
+
+    // circles
+    [[0,0,30],[-20,10,18],[20,10,18],[-10,-18,16],[10,-18,16]].forEach(([ox,oy,r]) => {
+      ctx.beginPath();
+      ctx.arc(ccx + ox, ccy + oy, r, 0, Math.PI * 2);
+      ctx.fillStyle = lerpColor('#C8A84B', canopyA * 0.18);
+      ctx.fill();
+      ctx.strokeStyle = lerpColor('#E8C96A', canopyA * 0.5);
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    });
+
+    if (canopyA > 0.3) {
+      ctx.fillStyle = lerpColor('#F4F0E6', canopyA * 0.9);
+      ctx.font = '500 10px Outfit';
+      ctx.textAlign = 'center';
+      const lines = canopyLabels[ci].split('\n');
+      lines.forEach((line, li) => {
+        ctx.fillText(line, ccx, ccy + (li - (lines.length - 1) / 2) * 14 + 4);
+      });
+    }
+  });
+
+  // connect canopy to top of trunk
+  canopyCenters.forEach(([ccx, ccy]) => {
+    ctx.beginPath();
+    ctx.moveTo(cx, trunkTop);
+    ctx.quadraticCurveTo(cx + (ccx - cx) * 0.5, trunkTop - 60, ccx, ccy + 28);
+    ctx.strokeStyle = lerpColor('#C8A84B', canopyA * 0.4);
+    ctx.lineWidth = 2;
+    ctx.setLineDash([4, 4]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  });
+
+  // ── LAYER LABELS ON SIDE ──
+  ctx.save();
+  const layerDefs = [
+    { y: groundY + 30, label: '① ROOTS: Pre-cognitive foundations', color: '#8B6020', l: 0 },
+    { y: trunkTop + trunkH * 0.55, label: '② TRUNK: Core cognitive skills', color: '#7DBF7E', l: 1 },
+    { y: trunkTop - 60, label: '③ PRIMARY BRANCHES: Applied skills', color: '#4A8C4E', l: 2 },
+    { y: trunkTop - 130, label: '④ SECONDARY: Specializations', color: '#7DBF7E', l: 3 },
+    { y: trunkTop - 175, label: '⑤ LEAVES: Tools & micro-skills', color: '#C8A84B', l: 4 },
+    { y: trunkTop - 215, label: '⑥ CANOPY: Uniquely human', color: '#E8C96A', l: 5 },
+  ];
+  layerDefs.forEach(({ y, label, color, l }) => {
+    const a = hlayer < 0 || hlayer === l ? 0.7 : 0.15;
+    ctx.fillStyle = lerpColor(color, a);
+    ctx.font = '400 9px IBM Plex Mono';
+    ctx.textAlign = 'left';
+    ctx.fillText(label, 8, y);
+    // dashed line
+    ctx.beginPath();
+    ctx.moveTo(8 + ctx.measureText(label).width + 4, y - 3);
+    ctx.lineTo(cx - 230, y - 3);
+    ctx.strokeStyle = lerpColor(color, a * 0.3);
+    ctx.lineWidth = 0.5;
+    ctx.setLineDash([3, 5]);
+    ctx.stroke();
+    ctx.setLineDash([]);
+  });
+  ctx.restore();
+}
+
+drawTree(-1);
+
+window.highlightLayer = function(layerIdx, el) {
+  highlightedLayer = highlightedLayer === layerIdx ? -1 : layerIdx;
+  document.querySelectorAll('.legend-item').forEach(li => li.classList.remove('active'));
+  if (highlightedLayer >= 0) el.classList.add('active');
+  drawTree(highlightedLayer);
+};
+</script>
+
+<!-- SUBSCRIBE STRIP -->
+<section style="
+  background: #1A2B1A;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 4rem 2rem;
+  text-align: center;
+">
+  <div style="max-width: 520px; margin: 0 auto;">
+    <div style="font-family:'DM Mono',monospace;font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(180,210,120,0.6);margin-bottom:0.8rem;">The Value Shift</div>
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:400;color:#E8F0D8;line-height:1.4;margin-bottom:0.6rem;">Enjoyed this issue?</h3>
+    <p style="font-family:'DM Sans',sans-serif;font-size:0.9rem;color:#7A9A6A;line-height:1.7;margin-bottom:1.8rem;">Free, fortnightly. Each issue traces one dimension of the shifting value landscape — historically, structurally, and visually.</p>
+    <form action="https://formspree.io/f/xkopvzdj" method="POST" style="display:flex;flex-direction:column;gap:0.8rem;">
+      <div style="display:flex;gap:0.6rem;">
+        <input type="email" name="email" required placeholder="your@email.com" style="
+          flex:1;background:rgba(255,255,255,0.04);border:1px solid rgba(180,210,120,0.2);
+          color:#E8F0D8;font-family:'DM Mono',monospace;font-size:0.8rem;
+          padding:0.75rem 1rem;outline:none;border-radius:2px;
+        ">
+        <button type="submit" style="
+          background:#4A7A3A;border:none;color:#E8F0D8;font-family:'DM Mono',monospace;
+          font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;
+          padding:0.75rem 1.5rem;cursor:pointer;border-radius:2px;white-space:nowrap;
+        ">Subscribe Free →</button>
+      </div>
+      <input type="hidden" name="_subject" value="New subscriber — The Value Shift">
+      <input type="text" name="_gotcha" style="display:none">
+    </form>
+    <p style="font-family:'DM Mono',monospace;font-size:0.55rem;letter-spacing:0.12em;color:#4A6A4A;margin-top:0.8rem;text-transform:uppercase;">No spam · No ads · Unsubscribe anytime</p>
+  </div>
+</section>
+</body>
+</html>
