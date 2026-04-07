@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Knowing to Thinking — What AI Is Doing to the Value of Expertise | The Value Shift</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=IBM+Plex+Mono:wght@300;400;500&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="description" content="AI is making knowledge cheap. What makes someone genuinely valuable is shifting from knowing things to thinking originally. Rooted in Aristotle, Berlin, McLuhan, and Arendt.">
+<meta name="author" content="The Value Shift">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://thevalueshift.com/issues/knowing-to-thinking/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="From Knowing to Thinking — What AI Is Doing to the Value of Expertise">
+<meta property="og:description" content="AI is making knowledge cheap. What makes someone genuinely valuable is shifting from knowing to thinking originally.">
+<meta property="og:url" content="https://thevalueshift.com/issues/knowing-to-thinking/">
+<meta property="og:site_name" content="The Value Shift">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="From Knowing to Thinking — What AI Is Doing to the Value of Expertise">
+<style>
+:root {
+  --bg:        #1E2A3A;
+  --deep:      #172030;
+  --surface:   #253347;
+  --lift:      #2E3F56;
+  --rule:      rgba(255,255,255,0.07);
+  --body:      #A8BAC8;
+  --mid:       #6A8098;
+  --muted:     #3A5068;
+  --light:     #D8E6F0;
+  --white:     #F0F6FA;
+  --brass:     #C49A3C;
+  --brass-d:   #9A7428;
+  --brass-dim: rgba(196,154,60,0.1);
+  --serif:     'Cormorant Garamond', Georgia, serif;
+  --sans:      'Source Sans 3', sans-serif;
+  --mono:      'IBM Plex Mono', monospace;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--light);font-family:var(--sans);font-size:17px;line-height:1.8;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+.masthead{border-bottom:1px solid var(--rule);padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;background:var(--deep);}
+.masthead-pub{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--brass);}
+.masthead-title{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--light);font-style:italic;text-align:center;}
+.masthead-meta{font-family:var(--mono);font-size:0.55rem;color:var(--mid);letter-spacing:0.08em;text-align:right;}
+
+.hero{min-height:88vh;display:flex;align-items:center;justify-content:center;padding:7rem 3rem 5rem;position:relative;overflow:hidden;text-align:center;background:var(--deep);border-bottom:1px solid var(--rule);}
+.hero::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(196,154,60,0.05) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1;max-width:740px;}
+.hero-issue{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--brass);margin-bottom:2.5rem;display:flex;align-items:center;justify-content:center;gap:0.8rem;}
+.hero-issue::before,.hero-issue::after{content:'';width:30px;height:1px;background:var(--brass);opacity:0.4;}
+.hero-h1{font-family:var(--serif);font-size:clamp(2.8rem,6vw,5rem);font-weight:300;line-height:1.1;color:var(--white);margin-bottom:0.5rem;opacity:0;animation:fadeUp 1s ease 0.2s forwards;}
+.hero-h1 em{font-style:italic;color:var(--brass);}
+.hero-sub{font-family:var(--mono);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin:1.5rem 0 2.5rem;opacity:0;animation:fadeUp 1s ease 0.4s forwards;}
+.hero-deck{font-family:var(--serif);font-size:1.3rem;font-weight:300;font-style:italic;line-height:1.7;color:var(--body);max-width:600px;margin:0 auto 3rem;opacity:0;animation:fadeUp 1s ease 0.6s forwards;}
+.hero-deck em{color:var(--brass);font-style:normal;font-weight:400;}
+.thinkers{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;opacity:0;animation:fadeUp 1s ease 0.8s forwards;}
+.thinker-tag{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);padding:0.3rem 0.7rem;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+.section{max-width:780px;margin:0 auto;padding:6rem 3rem;}
+.section-wide{max-width:1000px;margin:0 auto;padding:6rem 3rem;}
+.section-bg{background:var(--deep);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.ch-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--brass);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem;}
+.ch-label::before{content:'§';font-size:0.7rem;}
+.ch-h2{font-family:var(--serif);font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.2;color:var(--white);margin-bottom:2rem;}
+.ch-h2 em{font-style:italic;color:var(--brass);}
+.prose{font-size:1rem;line-height:1.9;color:var(--body);margin-bottom:1.5rem;}
+.prose strong{color:var(--light);font-weight:500;}
+.prose em{color:var(--brass);font-style:italic;}
+.pull{border-left:2px solid var(--brass);padding:1.2rem 1.5rem;margin:2.5rem 0;background:var(--brass-dim);}
+.pull p{font-family:var(--serif);font-size:1.4rem;font-weight:300;font-style:italic;color:var(--light);line-height:1.55;}
+.pull cite{display:block;font-family:var(--mono);font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--brass);margin-top:0.7rem;font-style:normal;}
+
+.timeline{position:relative;padding-left:2rem;margin-top:2rem;}
+.timeline::before{content:'';position:absolute;left:0.4rem;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--brass),rgba(196,154,60,0.1));}
+.tl-item{position:relative;padding-bottom:2.5rem;opacity:0;transform:translateX(-8px);transition:opacity 0.5s ease,transform 0.5s ease;}
+.tl-item.vis{opacity:1;transform:translateX(0);}
+.tl-dot{position:absolute;left:-1.72rem;top:0.35rem;width:9px;height:9px;border-radius:50%;background:var(--bg);border:1.5px solid var(--brass);}
+.tl-dot.filled{background:var(--brass);}
+.tl-year{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.15em;color:var(--brass);margin-bottom:0.25rem;}
+.tl-title{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:0.4rem;line-height:1.3;}
+.tl-body{font-size:0.9rem;line-height:1.75;color:var(--body);}
+.tl-body em{color:var(--brass);font-style:italic;}
+.tl-body strong{color:var(--light);font-weight:500;}
+
+.aristotle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:2rem;}
+.aristotle-card{background:var(--surface);padding:2.2rem 1.8rem;position:relative;opacity:0;transform:translateY(8px);transition:opacity 0.5s ease,transform 0.5s ease,background 0.25s;}
+.aristotle-card.vis{opacity:1;transform:translateY(0);}
+.aristotle-card:hover{background:var(--lift);}
+.aristotle-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;transform:scaleX(0);transform-origin:left;transition:transform 0.4s ease;background:var(--brass);}
+.aristotle-card:hover::after{transform:scaleX(1);}
+.ac-greek{font-family:var(--serif);font-size:2rem;font-weight:300;font-style:italic;color:var(--brass);margin-bottom:0.3rem;line-height:1;}
+.ac-english{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--mid);margin-bottom:1rem;padding-bottom:0.8rem;border-bottom:1px solid var(--rule);}
+.ac-def{font-size:0.88rem;line-height:1.75;color:var(--body);margin-bottom:1rem;}
+.ac-def em{color:var(--brass);font-style:italic;}
+.ac-ai{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;padding:0.6rem 0.8rem;border:1px solid var(--rule);line-height:1.55;}
+.ac-ai.can{color:rgba(196,154,60,0.5);}
+.ac-ai.cannot{color:rgba(196,154,60,0.9);border-color:rgba(196,154,60,0.25);background:var(--brass-dim);}
+.ac-ai::before{content:'AI ';}
+
+.fh-wrap{display:grid;grid-template-columns:1fr 40px 1fr;gap:0;margin-top:2rem;border:1px solid var(--rule);}
+.fh-col{padding:2.5rem 2rem;}
+.fh-col.hedge{background:var(--surface);}
+.fh-col.fox{background:var(--lift);}
+.fh-divider{display:flex;align-items:center;justify-content:center;background:var(--deep);border-left:1px solid var(--rule);border-right:1px solid var(--rule);writing-mode:vertical-rl;font-family:var(--mono);font-size:0.55rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.fh-animal{font-size:2.5rem;margin-bottom:0.5rem;display:block;}
+.fh-title{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:var(--white);margin-bottom:0.3rem;}
+.fh-subtitle{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.12em;color:var(--mid);text-transform:uppercase;margin-bottom:1rem;padding-bottom:0.8rem;border-bottom:1px solid var(--rule);}
+.fh-body{font-size:0.88rem;line-height:1.75;color:var(--body);margin-bottom:1rem;}
+.fh-body em{color:var(--brass);font-style:italic;}
+.fh-verdict{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.08em;padding:0.5rem 0.8rem;border-left:2px solid var(--brass);color:var(--brass);background:var(--brass-dim);}
+
+.practical-grid{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:2rem;}
+.practical-card{background:var(--surface);padding:2rem 2.5rem;display:grid;grid-template-columns:60px 1fr;gap:1.5rem;align-items:start;opacity:0;transform:translateY(6px);transition:opacity 0.5s ease,transform 0.5s ease,background 0.25s;}
+.practical-card.vis{opacity:1;transform:translateY(0);}
+.practical-card:hover{background:var(--lift);}
+.pc-num{font-family:var(--serif);font-size:3rem;font-weight:300;color:var(--brass);opacity:0.3;line-height:1;text-align:right;}
+.pc-title{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--white);margin-bottom:0.5rem;line-height:1.3;}
+.pc-for{font-family:var(--mono);font-size:0.55rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--brass);margin-bottom:0.5rem;}
+.pc-body{font-size:0.88rem;line-height:1.75;color:var(--body);}
+.pc-body em{color:var(--brass);font-style:italic;}
+.pc-body strong{color:var(--light);font-weight:500;}
+
+.quiz-wrap{max-width:660px;margin:2rem auto 0;}
+.qcard{background:var(--surface);border:1px solid var(--rule);padding:2.5rem;}
+.q-eye{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.12em;color:var(--mid);margin-bottom:1rem;}
+.q-text{font-family:var(--serif);font-size:1.25rem;font-weight:300;line-height:1.55;color:var(--white);margin-bottom:1.5rem;}
+.q-opts{display:flex;flex-direction:column;gap:0.6rem;}
+.q-opt{background:var(--bg);border:1px solid var(--rule);padding:0.85rem 1.1rem;text-align:left;color:var(--body);font-family:var(--serif);font-size:0.95rem;cursor:pointer;transition:all 0.2s;line-height:1.5;}
+.q-opt:hover:not(.locked){background:var(--lift);border-color:rgba(196,154,60,0.35);color:var(--light);}
+.q-opt.correct{background:var(--brass-dim);border-color:rgba(196,154,60,0.5);color:var(--brass);}
+.q-opt.wrong{background:rgba(255,255,255,0.02);border-color:rgba(255,255,255,0.06);color:var(--muted);}
+.q-opt.locked{cursor:default;}
+.q-explain{margin-top:1rem;padding:1rem 1.2rem;background:var(--brass-dim);border-left:2px solid var(--brass);font-size:0.88rem;line-height:1.75;color:var(--body);display:none;font-style:italic;}
+.q-explain.show{display:block;}
+.q-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:1.5rem;}
+.q-prog{font-family:var(--mono);font-size:0.6rem;color:var(--muted);}
+.q-btn{background:var(--brass);color:var(--deep);border:none;padding:0.65rem 1.5rem;font-family:var(--mono);font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-weight:500;transition:background 0.2s;}
+.q-btn:hover:not(:disabled){background:#D4AA4C;}
+.q-btn:disabled{opacity:0.25;cursor:default;}
+.q-score-big{font-family:var(--serif);font-size:5rem;font-weight:300;color:var(--brass);display:block;line-height:1;margin-bottom:0.5rem;}
+.q-score-label{font-size:1rem;color:var(--mid);font-style:italic;margin-bottom:1.5rem;}
+
+.issue-footer{background:var(--deep);border-top:1px solid var(--rule);padding:2rem 3rem;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:0.55rem;letter-spacing:0.12em;color:var(--mid);text-transform:uppercase;}
+.issue-footer a{color:var(--brass);text-decoration:none;}
+
+.reveal{opacity:0;transform:translateY(12px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.vis{opacity:1;transform:translateY(0);}
+
+@media(max-width:768px){
+  .masthead{padding:1rem 1.5rem;flex-direction:column;gap:0.4rem;text-align:center;}
+  .hero{padding:5rem 1.5rem 3rem;}
+  .section,.section-wide{padding:4rem 1.5rem;}
+  .aristotle-grid{grid-template-columns:1fr;}
+  .fh-wrap{grid-template-columns:1fr;}
+  .fh-divider{writing-mode:horizontal-tb;padding:0.5rem;border:none;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+  .practical-card{grid-template-columns:1fr;}
+  .pc-num{font-size:2rem;text-align:left;}
+  .issue-footer{flex-direction:column;gap:0.4rem;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<div id="mobileNote" style="display:none;background:rgba(23,32,48,0.98);color:rgba(196,154,60,0.85);text-align:center;padding:0.5rem 1rem;font-size:0.62rem;letter-spacing:0.15em;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;border-bottom:1px solid rgba(196,154,60,0.15);">&#10022; Best experienced on desktop</div>
+<script>if(window.innerWidth<768)document.getElementById('mobileNote').style.display='block';</script>
+
+<header class="masthead">
+  <div class="masthead-pub">The Value Shift</div>
+  <div class="masthead-title">From Knowing to Thinking</div>
+  <div class="masthead-meta">Issue 007 &middot; Philosophy &middot; AI &middot; Expertise</div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-issue">Issue 007 &middot; The Value Shift</div>
+    <h1 class="hero-h1">From <em>Knowing</em><br>to Thinking</h1>
+    <p class="hero-sub">What AI Is Doing to the Value of Expertise</p>
+    <p class="hero-deck">For a century, knowing things was the path to value. <em>Expertise</em> meant mastery of a body of knowledge and the ability to apply it reliably. AI just made that cheap. The question is what comes next &mdash; and the answer is older than you think.</p>
+    <div class="thinkers">
+      <div class="thinker-tag">Aristotle &middot; 350 BC</div>
+      <div class="thinker-tag">Isaiah Berlin &middot; 1953</div>
+      <div class="thinker-tag">Marshall McLuhan &middot; 1964</div>
+      <div class="thinker-tag">Hannah Arendt &middot; 1958</div>
+    </div>
+  </div>
+</section>
+
+<section id="promise">
+  <div class="section">
+    <div class="ch-label">Chapter I &middot; The Promise</div>
+    <h2 class="ch-h2">The 20th century made<br>one enormous bet.</h2>
+    <p class="prose">The bet was this: that the path to individual and organisational value ran through the accumulation and reliable application of knowledge. Get educated. Accumulate expertise. Apply it consistently. Be depended upon for what you know.</p>
+    <p class="prose">This was not irrational. For most of the 20th century, knowledge was genuinely scarce. Information was hard to find, expensive to store, and slow to transmit. The person who knew things &mdash; the doctor, the lawyer, the consultant, the specialist &mdash; had something others could not easily get elsewhere. Their value was structural. It did not depend on how interesting they were. It depended on what they knew that you did not.</p>
+    <p class="prose">Entire systems were built around this bet. Universities credentialled it. Professional bodies protected it. Organisations were structured around it &mdash; layers of management existed largely to aggregate and transmit knowledge upward and decisions downward. The knowledge hierarchy was the value hierarchy.</p>
+    <div class="pull reveal">
+      <p>&ldquo;The most important thing is not to stop questioning. Curiosity has its own reason for existing.&rdquo;</p>
+      <cite>&mdash; Albert Einstein, 1955</cite>
+    </div>
+    <p class="prose">Two things have happened simultaneously to undermine this bet. First, the internet made information nearly free and universally accessible. Second, AI made the reliable application of that information cheap. The structural advantage of knowing things has been eroded &mdash; and for many types of knowledge work, it has been eliminated entirely.</p>
+    <p class="prose">This is not a crisis. It is a transition. And transitions of this kind have happened before &mdash; each time repricing human capability in ways that seemed catastrophic to those holding the old skills and obvious in retrospect to everyone else.</p>
+  </div>
+</section>
+
+<section class="section-bg" id="history">
+  <div class="section-wide">
+    <div class="ch-label">Chapter II &middot; The Pattern</div>
+    <h2 class="ch-h2">Every media shift<br>reprices human capability.</h2>
+    <p class="prose reveal" style="max-width:700px;">McLuhan&rsquo;s insight was that new media do not just deliver content differently &mdash; they restructure human perception and social organisation. The capability that was scarce before the shift becomes abundant after it. This has happened four times in the last 600 years.</p>
+    <div class="timeline" id="tlList">
+      <div class="tl-item" data-d="0">
+        <div class="tl-dot filled"></div>
+        <div class="tl-year">1440s &middot; The Printing Press</div>
+        <div class="tl-title">Memorisation becomes cheap. Analysis becomes valuable.</div>
+        <div class="tl-body">Before Gutenberg, the scholar who had memorised vast bodies of text was genuinely scarce and genuinely valuable. The printing press made text abundant and reproducible. Within a century, the value of pure memorisation had collapsed &mdash; and the value of the person who could <em>analyse, interpret, and argue</em> from texts had risen sharply. The Reformation was partly a knowledge revolution: ordinary people could now read scripture themselves and form their own judgments.</div>
+      </div>
+      <div class="tl-item" data-d="1">
+        <div class="tl-dot filled"></div>
+        <div class="tl-year">1760s &middot; The Industrial Revolution</div>
+        <div class="tl-title">Craft knowledge becomes cheap. System design becomes valuable.</div>
+        <div class="tl-body">The skilled craftsman &mdash; the weaver, the blacksmith, the clockmaker &mdash; held value in tacit knowledge of materials, tools, and process that took years to acquire. Industrial machinery encoded much of that knowledge into mechanical systems. What it could not encode was the ability to <em>design, manage, and improve</em> those systems. The engineer and the manager replaced the master craftsman as the valued human in the production chain.</div>
+      </div>
+      <div class="tl-item" data-d="2">
+        <div class="tl-dot filled"></div>
+        <div class="tl-year">1990s &middot; The Internet</div>
+        <div class="tl-title">Information access becomes cheap. Curation and judgment become valuable.</div>
+        <div class="tl-body">The encyclopedia salesman, the reference librarian, the specialist who knew where to find obscure information &mdash; these roles were structurally undermined when every fact became a search query away. What rose in value was <em>the ability to navigate, evaluate, and synthesise</em> the flood of information. The analyst, the editor, the strategist &mdash; people who could make sense of abundance rather than just provide access to it.</div>
+      </div>
+      <div class="tl-item" data-d="3">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2020s &middot; Artificial Intelligence</div>
+        <div class="tl-title">Knowledge application becomes cheap. Original thinking becomes valuable.</div>
+        <div class="tl-body">AI does not just store and retrieve information. It applies it &mdash; drafting, analysing, summarising, coding, diagnosing, predicting. The reliable application of existing knowledge to known problem types, which was the core activity of the 20th-century knowledge worker, is now being automated at scale. What it <em>cannot</em> do is generate genuine insight, exercise judgment in genuinely novel situations, or think in ways that have not been thought before. That capability &mdash; which Aristotle named phronesis 2,400 years ago &mdash; is now the scarce resource.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aristotle">
+  <div class="section-wide">
+    <div class="ch-label">Chapter III &middot; The Framework</div>
+    <h2 class="ch-h2">Aristotle named this problem<br>2,400 years ago.</h2>
+    <p class="prose reveal" style="max-width:700px;">In the Nicomachean Ethics, Aristotle distinguished three types of knowledge. The distinction was not academic &mdash; he was trying to understand what it meant to live and act well. His categories map onto the AI transition with unsettling precision.</p>
+    <div class="aristotle-grid">
+      <div class="aristotle-card" data-d="0">
+        <div class="ac-greek">Episteme</div>
+        <div class="ac-english">Scientific knowledge &middot; Knowing that</div>
+        <div class="ac-def">Knowledge of fixed, demonstrable truths. The kind that can be written down, transmitted, and verified. <em>Water boils at 100&deg;C. The Battle of Hastings was in 1066.</em> Episteme is propositional &mdash; it consists of statements that are either true or false.</div>
+        <div class="ac-ai can">Can do this: retrieves, stores, and applies epistemic knowledge near-perfectly at essentially zero marginal cost.</div>
+      </div>
+      <div class="aristotle-card" data-d="1">
+        <div class="ac-greek">Techne</div>
+        <div class="ac-english">Craft knowledge &middot; Knowing how</div>
+        <div class="ac-def">Knowledge of how to make or do things. The surgeon&rsquo;s skill, the programmer&rsquo;s facility with code, the architect&rsquo;s spatial reasoning. Techne is procedural &mdash; it can in principle be reduced to rules and learned patterns of action.</div>
+        <div class="ac-ai can">Can do this increasingly: code generation, medical imaging analysis, legal document drafting. The boundary is moving rapidly.</div>
+      </div>
+      <div class="aristotle-card" data-d="2">
+        <div class="ac-greek">Phronesis</div>
+        <div class="ac-english">Practical wisdom &middot; Knowing what matters</div>
+        <div class="ac-def">The capacity to discern the right course of action in particular, uncertain, morally complex situations. Phronesis cannot be reduced to rules &mdash; it is precisely the form of knowledge required when rules run out. It involves judgment, experience, values, and the ability to read a specific human situation in its full complexity.</div>
+        <div class="ac-ai cannot">Cannot do this: phronesis requires genuine uncertainty, genuine values, and genuine skin in the game. No current or near-future AI has any of these.</div>
+      </div>
+    </div>
+    <div class="pull reveal" style="margin-top:2.5rem;">
+      <p>&ldquo;It is the mark of an educated mind to be able to entertain a thought without accepting it.&rdquo;</p>
+      <cite>&mdash; Aristotle, Nicomachean Ethics</cite>
+    </div>
+    <p class="prose reveal">The 20th century organisation rewarded episteme and techne above phronesis &mdash; because episteme and techne were scarce and phronesis was assumed. AI has separated them. When episteme and techne can be purchased cheaply, phronesis stands alone as the irreducible human contribution.</p>
+  </div>
+</section>
+
+<section class="section-bg" id="fox">
+  <div class="section-wide">
+    <div class="ch-label">Chapter IV &middot; Berlin&rsquo;s Distinction</div>
+    <h2 class="ch-h2">The fox and the hedgehog.<br>Only one is being automated.</h2>
+    <p class="prose reveal" style="max-width:700px;">Isaiah Berlin&rsquo;s 1953 essay drew on a fragment from the Greek poet Archilochus: <em>&ldquo;The fox knows many things; the hedgehog knows one big thing.&rdquo;</em> Berlin used it to distinguish two fundamental types of intellectual personality. The distinction has acquired a new urgency in the age of AI.</p>
+    <div class="fh-wrap reveal">
+      <div class="fh-col hedge">
+        <span class="fh-animal">&#129428;</span>
+        <div class="fh-title">The Hedgehog</div>
+        <div class="fh-subtitle">Knows one big thing &middot; Depth &middot; Consistency</div>
+        <div class="fh-body">The hedgehog relates everything to a single central organising idea. Hedgehogs are consistent, principled, and often brilliant within their domain &mdash; applying a single clarifying lens with extraordinary depth and rigour.</div>
+        <div class="fh-body"><em>The hedgehog is being automated.</em> AI is the ultimate hedgehog at scale &mdash; it applies any known framework to any known problem type with exhaustive consistency. The value of hedgehog thinking that stays within established frameworks is declining rapidly.</div>
+        <div class="fh-verdict">AI is a perfect hedgehog. It applies known frameworks exhaustively.</div>
+      </div>
+      <div class="fh-divider">versus</div>
+      <div class="fh-col fox">
+        <span class="fh-animal">&#129418;</span>
+        <div class="fh-title">The Fox</div>
+        <div class="fh-subtitle">Knows many things &middot; Breadth &middot; Surprise</div>
+        <div class="fh-body">The fox pursues many different ends, drawing on a wide range of experience, making unexpected connections across domains, resisting the pull of any single organising framework. They find the angle nobody else saw because nobody else was standing in the same place.</div>
+        <div class="fh-body"><em>The fox&rsquo;s value is rising.</em> The ability to connect across domains, to bring an unexpected perspective from outside the established framework, to notice what the hedgehog&rsquo;s single lens misses &mdash; this is precisely what AI cannot do.</div>
+        <div class="fh-verdict">The fox&rsquo;s cross-domain thinking is the rising scarce resource.</div>
+      </div>
+    </div>
+    <p class="prose reveal" style="margin-top:2rem;">What is being devalued is hedgehog thinking <em>alone</em> &mdash; the specialist who applies known frameworks to known problems without ever stepping outside them. That is the job AI is taking.</p>
+  </div>
+</section>
+
+<section id="arendt">
+  <div class="section">
+    <div class="ch-label">Chapter V &middot; Arendt&rsquo;s Argument</div>
+    <h2 class="ch-h2">What it actually means<br>to be <em>interesting.</em></h2>
+    <p class="prose">Hannah Arendt&rsquo;s <em>The Human Condition</em> (1958) distinguished three fundamental human activities. Labour &mdash; the biological maintenance of life. Work &mdash; the fabrication of durable objects and systems. And action &mdash; the uniquely human capacity to begin something new, to appear in the world in a way that changes it.</p>
+    <p class="prose">Action is inherently unpredictable, inherently relational, and inherently revelatory of who the person is. It is what makes someone genuinely present in the world &mdash; not their credentials, not their knowledge base, but their capacity to initiate something that could not have been predicted.</p>
+    <div class="pull reveal">
+      <p>&ldquo;Action, the only activity that goes on directly between men without the intermediary of things or matter, corresponds to the human condition of plurality.&rdquo;</p>
+      <cite>&mdash; Hannah Arendt, The Human Condition, 1958</cite>
+    </div>
+    <p class="prose">This is what Socrates was. He claimed to know nothing. He had no expertise to offer in the conventional sense. His entire value was in his capacity to initiate &mdash; to ask the question that revealed the inadequacy of the current answer. Athens executed him for it, which tells you something about how threatening genuine intellectual action is to established systems.</p>
+    <p class="prose"><strong>The person who is interesting in this sense is not the opposite of knowledgeable.</strong> They are typically deeply knowledgeable in at least one area. But they use that knowledge as a launching pad for genuine inquiry rather than as a destination. Their expertise enables their action rather than substituting for it.</p>
+  </div>
+</section>
+
+<section class="section-bg" id="practical">
+  <div class="section-wide">
+    <div class="ch-label">Chapter VI &middot; So What Do You Do?</div>
+    <h2 class="ch-h2">Moving from the knowing mode<br>to the thinking mode.</h2>
+    <p class="prose reveal" style="max-width:700px;">These are specific practices &mdash; applicable to individuals building their own intellectual capacity and to leaders thinking about how to build it in their organisations and teams.</p>
+    <div class="practical-grid">
+      <div class="practical-card" data-d="0">
+        <div class="pc-num">1</div>
+        <div>
+          <div class="pc-for">For individuals &amp; leaders</div>
+          <div class="pc-title">Cultivate questions, not just answers</div>
+          <div class="pc-body">A knowledgeable person is valued for the quality of their answers. A thinking person is valued for the quality of their questions &mdash; the ones that reveal why the current answer is insufficient. <em>Deliberately practise asking the question one level deeper than the one being discussed.</em> The question that makes the room go quiet is worth more than the answer everyone already expected.</div>
+        </div>
+      </div>
+      <div class="practical-card" data-d="1">
+        <div class="pc-num">2</div>
+        <div>
+          <div class="pc-for">For individuals</div>
+          <div class="pc-title">Build across domains deliberately</div>
+          <div class="pc-body">Fox thinking requires genuine exposure to multiple domains &mdash; not surface familiarity, but real enough engagement to understand how each domain structures its problems and what counts as evidence. The connections between domains are where genuinely novel thinking lives. <em>Choose one domain adjacent to your primary expertise and engage with it seriously for twelve months.</em> Not to become an expert &mdash; to see your primary domain from the outside.</div>
+        </div>
+      </div>
+      <div class="practical-card" data-d="2">
+        <div class="pc-num">3</div>
+        <div>
+          <div class="pc-for">For leaders &amp; organisations</div>
+          <div class="pc-title">Reward judgment, not just execution</div>
+          <div class="pc-body">Most organisations measure and reward execution &mdash; the reliable completion of defined tasks. This made sense when execution was the scarce human contribution. It makes less sense when AI executes reliably at lower cost. <em>Identify the moments in your organisation where genuine judgment is exercised</em> &mdash; where someone reads an ambiguous situation and makes a call that could not have been derived from a rulebook. Ask whether your measurement systems recognise those moments, or whether they are invisible in your metrics.</div>
+        </div>
+      </div>
+      <div class="practical-card" data-d="3">
+        <div class="pc-num">4</div>
+        <div>
+          <div class="pc-for">For individuals &amp; leaders</div>
+          <div class="pc-title">Use AI to amplify thinking, not replace it</div>
+          <div class="pc-body">The person who uses AI to avoid thinking is building a skill deficit. The person who uses AI to extend their thinking is building a capability advantage. The distinction is specific: <em>use AI for the episteme and techne work</em> &mdash; research, synthesis, drafting, pattern recognition &mdash; <em>and use the time freed for the phronesis work</em> that AI cannot do: the judgment calls, the novel connections, the questions that change the frame.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quiz">
+  <div class="section">
+    <div class="ch-label">Chapter VII &middot; Knowledge Check</div>
+    <h2 class="ch-h2" style="margin-bottom:2rem;">Test your thinking.</h2>
+    <div class="quiz-wrap">
+      <div class="qcard"><div id="qz"></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--deep);border-top:1px solid var(--rule);padding:4rem 2rem;text-align:center;">
+  <div style="max-width:520px;margin:0 auto;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--brass);margin-bottom:0.8rem;">The Value Shift</div>
+    <h3 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.8rem;font-weight:300;font-style:italic;color:var(--white);line-height:1.4;margin-bottom:0.6rem;">Enjoyed this issue?</h3>
+    <p style="font-family:'Source Sans 3',sans-serif;font-size:0.9rem;color:var(--mid);line-height:1.7;margin-bottom:1.8rem;">Free, fortnightly. Each issue traces one dimension of the shifting value landscape &mdash; historically, structurally, and visually.</p>
+    <form action="https://formspree.io/f/xkopvzdj" method="POST" style="display:flex;gap:0.6rem;max-width:440px;margin:0 auto 0.8rem;">
+      <input type="email" name="email" required placeholder="your@email.com" style="flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--white);font-family:'IBM Plex Mono',monospace;font-size:0.8rem;padding:0.75rem 1rem;outline:none;border-radius:2px;">
+      <button type="submit" style="background:var(--brass);border:none;color:var(--deep);font-family:'IBM Plex Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.75rem 1.2rem;cursor:pointer;border-radius:2px;white-space:nowrap;font-weight:500;">Subscribe &rarr;</button>
+      <input type="hidden" name="_subject" value="New subscriber — The Value Shift">
+      <input type="text" name="_gotcha" style="display:none">
+    </form>
+    <p style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;letter-spacing:0.12em;color:var(--muted);text-transform:uppercase;">No spam &middot; No ads &middot; Unsubscribe anytime</p>
+  </div>
+</section>
+
+<footer class="issue-footer">
+  <span>The Value Shift</span>
+  <span>Issue 007 &middot; From Knowing to Thinking</span>
+  <span>Aristotle &middot; Berlin &middot; McLuhan &middot; Arendt &middot; <a href="https://createvalue.ca">Werner &mdash; Create Value</a></span>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const d = parseInt(e.target.dataset.d || 0);
+      setTimeout(() => e.target.classList.add('vis'), d * 100);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.tl-item,.aristotle-card,.practical-card,.reveal').forEach(el => io.observe(el));
+
+const qs = [
+  {
+    q: "Aristotle's concept of phronesis is best described as:",
+    opts: ["Scientific knowledge of demonstrable truths — knowing that something is the case","Craft knowledge of how to make or do things — procedural skill","Practical wisdom — the judgment to act well in particular, uncertain situations that cannot be reduced to rules","Theoretical knowledge of abstract principles and ideal forms"],
+    ans: 2,
+    ex: "Phronesis — practical wisdom — is Aristotle's highest intellectual virtue precisely because it cannot be reduced to rules or transmitted directly. It is the form of knowledge required when rules run out: when the situation is genuinely novel, genuinely uncertain, and genuinely requires judgment about what matters most. This is why it remains irreducibly human and is now the scarcest form of human capital."
+  },
+  {
+    q: "Isaiah Berlin's fox is characterised by:",
+    opts: ["Deep mastery of a single domain, applied with extraordinary consistency","Knowing many things and making unexpected connections across domains without a single organising framework","Broad superficial familiarity with many fields without genuine depth in any","The ability to switch between frameworks depending on what the situation requires"],
+    ans: 1,
+    ex: "Berlin's fox knows many things — drawing on multiple domains, making unexpected connections, resisting any single organising lens. This is distinct from mere generalism. The fox's value comes from genuine engagement across multiple domains deep enough to see connections that specialists within any single domain cannot. This cross-domain synthesis is precisely what AI — the ultimate consistent hedgehog — cannot replicate."
+  },
+  {
+    q: "McLuhan's argument about media shifts implies that AI will:",
+    opts: ["Destroy human value in knowledge work irreversibly","Have no effect on which human capabilities are most valued","Make the application of existing knowledge cheap, raising the relative value of original thinking and judgment","Benefit hedgehog thinkers more than fox thinkers by providing more information to organise"],
+    ans: 2,
+    ex: "McLuhan's pattern is consistent across four major media transitions: each shift makes the previously scarce human capability abundant, raising the value of the capability that remains scarce. The printing press made memorisation cheap and raised the value of analysis. The internet made information access cheap and raised the value of curation. AI is making knowledge application cheap — raising the value of original synthesis and genuine judgment."
+  },
+  {
+    q: "Hannah Arendt's concept of 'action' is relevant to the AI transition because:",
+    opts: ["It describes physical labour that AI cannot perform","It captures the capacity to begin something genuinely new — to initiate in ways that change the world and cannot be predicted or automated","It refers to artistic and creative work that requires human emotion","It describes the managerial coordination of other people's activities"],
+    ans: 1,
+    ex: "Arendt's action is the uniquely human capacity to begin something new — to appear in the world in a way that changes it, that could not have been predicted from prior conditions. AI can labour and work but it cannot act in Arendt's sense because it cannot genuinely begin something that was not already implicit in its training data."
+  },
+  {
+    q: "The most productive individual use of AI, according to this issue's framework, is to:",
+    opts: ["Replace your own thinking wherever possible to save time","Avoid using AI to preserve your own cognitive capabilities","Use AI for episteme and techne work, freeing time and energy for the phronesis work it cannot do","Use AI only for creative tasks where it can generate novel outputs"],
+    ans: 2,
+    ex: "The productive use is specific: delegate to AI the work of episteme (research, retrieval, synthesis) and techne (drafting, coding, pattern application) — and use the time freed for the phronesis work that AI cannot do: judgment calls, novel connections, questions that change the frame. The person who does this consistently compounds their thinking advantage."
+  }
+];
+
+let cur = 0, score = 0;
+function render() {
+  const el = document.getElementById('qz');
+  if (cur >= qs.length) {
+    const pct = Math.round(score/qs.length*100);
+    const label = pct>=80 ? 'You think like a fox.' : pct>=60 ? 'Good foundations — keep reading.' : 'More Aristotle required.';
+    el.innerHTML = '<div style="text-align:center;padding:2rem 0;"><span class="q-score-big">'+score+'/'+qs.length+'</span><p class="q-score-label">'+label+'</p><button class="q-btn" onclick="cur=0;score=0;render()">Try Again</button></div>';
+    return;
+  }
+  const q = qs[cur];
+  el.innerHTML = '<div class="q-eye">Question '+(cur+1)+' of '+qs.length+' &nbsp;&middot;&nbsp; Score: '+score+'</div><div class="q-text">'+q.q+'</div><div class="q-opts">'+q.opts.map((o,i)=>'<button class="q-opt" onclick="pick('+i+')">'+o+'</button>').join('')+'</div><div class="q-explain" id="qex">'+q.ex+'</div><div class="q-bottom"><span class="q-prog">'+Array(qs.length).fill(0).map((_,i)=>i<cur?'&#9650;':i===cur?'&#9654;':'&#9651;').join('')+'</span><button class="q-btn" id="nxt" onclick="cur++;render()" disabled>Continue &rarr;</button></div>';
+}
+function pick(i) {
+  if (document.querySelector('.q-opt.locked')) return;
+  const q = qs[cur];
+  document.querySelectorAll('.q-opt').forEach((b,idx) => {
+    b.classList.add('locked');
+    if (idx===q.ans) b.classList.add('correct');
+    else if (idx===i) b.classList.add('wrong');
+  });
+  if (i===q.ans) score++;
+  document.getElementById('qex').classList.add('show');
+  document.getElementById('nxt').disabled = false;
+}
+render();
+</script>
+</body>
+</html>
