@@ -1,2 +1,2 @@
-# the-underlying-narrative
-The Underlying Narrative — a fortnightly publication
+# the-value-shift
+The Value Shift — a fortnightly publication
